@@ -1,0 +1,157 @@
+@import '../../variables.scss';
+@import '../../utility.scss';
+
+.title {
+    font-family: $fontStack;
+    color: $fontColor;
+    text-align: center;
+    font-weight: $fontSemiBold;
+    font-size: 24px;
+
+    @include useMobile {
+        margin-top: 72px;
+    }
+
+    @include useTablet {
+        margin-top: 72px;
+    }
+    
+    @include useDesktopSmall {
+        margin-top: 72px;
+    }
+    @include useDesktopLarge {
+        margin-top: 72px;
+    }
+}
+
+.logo-container {
+    margin: auto;
+    height: 500px;
+}
+
+.logo-box:first-of-type {
+    margin-left: 20%;
+    margin-top: 5%;
+    display: inline-block;
+
+    @include useMobile {
+        margin-left: 8%;
+    }
+    img {
+       height: 50%;
+    }
+    p {
+        font-family: $fontStack;
+        color: $fontColor;
+        text-align: center;
+        font-weight: $fontMedium;
+        margin-top: -10px;
+    }
+}
+
+.logo-box:nth-of-type(2) {
+    margin-left: 15%;
+    display: inline-block;
+    height: 50%;
+
+    @include useMobile {
+        margin-left: 8%;
+    }
+    
+    img {
+        position: relative;
+        top: -32%;
+        height: 40%;
+
+        @include useMobile {
+            top: 20%;
+            left: 8%;
+        }
+    }
+
+    p {
+        font-family: $fontStack;
+        color: $fontColor;
+        text-align: center;
+        font-weight: $fontMedium;
+        margin-left: 32px;
+        margin-top: -24px;
+
+        @include useMobile {
+            margin-left: 72px;
+            margin-top: 92px;
+        }
+    } 
+}
+
+.logo-box:nth-of-type(3) {
+    margin-left: 20%;
+    display: inline-block;
+    position: relative;
+    top: -56%;
+
+    @include useMobile {
+        margin-left: 8%;
+        margin-top: 74%;
+    }
+
+    img {
+        height: 50%;
+        @include useMobile {
+            height: 30%;
+        }
+    }
+
+    p {
+        margin-top: 16%;;
+        font-family: $fontStack;
+        color: $fontColor;
+        text-align: center;
+        font-weight: $fontMedium;
+    }
+}
+
+.logo-box:nth-of-type(4) {
+    margin-left: 15%;
+    margin-top: 16%;
+    display: inline-block;
+    height: 70%;
+
+    @include useMobile {
+        margin-left: 8%;
+    }
+    
+    img {
+        position: relative;
+        margin-top: 16px;
+        top: -92%;
+        height: 48%;
+        left: 2%;
+
+        @include useMobile {
+            top: -84%;
+            left: 14%;
+            height: 48%;
+        }
+    }
+
+    p {
+        font-family: $fontStack;
+        color: $fontColor;
+        text-align: center;
+        font-weight: $fontMedium;
+        margin-left: -172px;
+        margin-top: -10px;
+        display: inline-block;
+        position: relative;
+        top: -78%;
+
+        @include useMobile {
+            margin-left: 94px;
+            margin-top: 16px;
+        }
+    } 
+}
+
+
+

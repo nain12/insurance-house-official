@@ -1,0 +1,22 @@
+@import '../../variables.scss';
+@import '../../utility.scss';
+
+.banner {
+    width: 100%;
+   
+    border: 1px solid black;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include useMobile {
+        height: 400px;
+    }
+    @include useTablet {
+        height: 400px;
+    }
+    @include useDesktopSmall {
+        height: 400px;
+    }
+    @include useDesktopLarge {
+        height: 400px;
+    }
+}

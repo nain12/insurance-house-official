@@ -1,0 +1,12 @@
+@import '../../variables.scss';
+@import '../../utility.scss';
+
+.container {
+  width: 100%;
+  background-color: $primaryColor;
+  display: flex;
+
+  @include useDesktopLarge {
+        height: 500px;
+  }
+}

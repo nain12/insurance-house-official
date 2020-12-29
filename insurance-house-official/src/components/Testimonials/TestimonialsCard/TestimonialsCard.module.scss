@@ -1,0 +1,16 @@
+@import '../../../variables.scss';
+@import '../../../utility.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    background-color: $backgroundColor;
+    border-radius: 5px;
+     
+    @include useDesktopLarge {
+        margin-top: 116px;
+        margin-left: 96px;
+        height: 80%;
+    }
+}

@@ -1,0 +1,224 @@
+@import '../../variables.scss';
+@import '../../utility.scss';
+
+.navigation-bar {
+    width:100%;
+    background-color: $primaryColor;
+
+    @include useMobile {
+        height: 54px;
+    }
+
+    @include useTablet{
+        height: 64px;
+    }
+    
+    @include useDesktopSmall {
+        height: 64px;
+    }
+
+    @include useDesktopLarge {
+        height: 72px;
+    }
+}
+
+.logo {
+    color: $navItemsColor;
+    font-family: $fontStack;
+    font-weight: $fontSemiBold;
+    position: absolute;
+   
+    @include useMobile {
+        top: 2.5%;
+        left: 4%;
+        transform: scale(0.90, 0.90);
+    }
+
+    @include useTablet {
+        top: 2%;
+        left: 1%;
+        font-size: 16px;
+        transform: scale(0.90, 0.90);
+    }
+
+    @include useDesktopSmall {
+        top: 2%;
+        left: 1%;
+        font-size: 16px;
+        transform: scale(0.90, 0.90);
+    }
+
+    @include useDesktopLarge {
+        top: 2%;
+        left: 2%;
+        display: inline-block;
+        width: 12%;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.5px;
+        transform: scale(0.90, 0.75);
+    }
+  
+    span {
+        
+        @include useTablet {
+            display: inline-block;
+            margin: 0 0 2% 12%; 
+        }
+
+        @include useDesktopSmall {
+            display: inline-block;
+            margin: 0 0 2% 12%; 
+        }
+
+        @include useDesktopLarge {
+        display: inline-block;
+        margin: 0 0 4% 24%; 
+        }
+    }
+}
+
+.hamburger-menu {
+    display: none;
+
+    @include useMobile {
+        display: block;
+        border: 2px solid $navItemsColor;
+        border-radius: 4px;
+        height: 32px;
+        width: 50px;
+        float: right;
+        margin: 8px;
+    }
+
+    div {
+        border-top: 4px solid $navItemsColor;
+        margin-top: 4px;
+        border-width: 4px;
+        width: 50%;
+        position: relative;
+        left: 24%;
+        top: 4%;
+    }
+}
+
+.navbar {
+
+    @include useMobile{
+        display: none;
+        width: 100%;
+        background-color: $primaryColor;
+        position: absolute;
+        top: 9%;
+    }
+}
+
+.nav-list-items {
+    color: $navItemsColor;
+    font-family: $fontStack;
+    font-weight: $fontMedium;
+   
+    @include useMobile {
+        display: block;
+    }
+
+    @include useTablet {
+        display: flex;
+        margin-left: 20%;
+        position: absolute;
+        top: 1%;
+    }
+
+    @include useDesktopSmall {
+        display: flex;
+        margin-left: 20%;
+        position: absolute;
+        top: 1%;
+    }
+
+    @include useDesktopLarge {
+        display: flex;
+        margin-left: 20%;
+        position: absolute;
+        top: 4%;
+    }
+    
+    li {
+        list-style-type: none;
+        font-size: 12px;
+        
+        @include useMobile {
+            padding: 8px;
+            margin: 16px;
+        }
+
+        @include useTablet {
+            padding: 4px;
+            margin: 8px;
+        }
+
+        @include useDesktopSmall {
+            padding: 4px;
+            margin: 8px;
+        }
+
+        @include useDesktopLarge {
+            white-space: nowrap;
+            padding-left: 16%;
+        }
+
+      a {
+          text-decoration: none;
+          color: $navItemsColor;
+          cursor: pointer;
+      }
+
+      a:hover {
+         border-bottom: 1px solid $navItemsColor;
+         padding-bottom: 1px;
+      }
+    }
+}
+
+.login {
+    color: $navItemsColor;
+    font-family: $fontStack;
+    font-weight: $fontMedium;
+    font-size: 14px;
+  
+    @include useMobile {
+        display: block;
+        padding: 8px;
+        margin: 16px;
+    }
+
+    @include useTablet {
+        position: absolute;
+        right: 0;
+        top: 3%;
+        padding-right: 2%;
+        font-size: 12px;
+    }
+
+    @include useDesktopSmall {
+        position: absolute;
+        right: 0;
+        top: 3%;
+        padding-right: 2%;
+        font-size: 12px;
+    }
+
+    @include useDesktopLarge {
+        position: absolute;
+        right: 0;
+        top: 4%;
+        padding-right: 4%;
+    
+    }
+
+    a {
+        text-decoration: none;
+        color: $navItemsColor;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,29 @@
+$breakpoint-mobile: 320px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop-small: 1024px;
+$breakpoint-desktop-large: 1280px;
+
+@mixin useMobile {
+    @media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet - 1px) {
+        @content;
+    }
+}
+
+
+@mixin useTablet {
+    @media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop-small - 1px) {
+        @content;
+    }
+}
+
+@mixin useDesktopSmall {
+    @media screen and (min-width: $breakpoint-desktop-small) and (max-width: $breakpoint-desktop-large - 1px) {
+        @content;
+    }
+}
+
+@mixin useDesktopLarge {
+    @media screen and (min-width: $breakpoint-desktop-large) {
+        @content;
+    }
+}
