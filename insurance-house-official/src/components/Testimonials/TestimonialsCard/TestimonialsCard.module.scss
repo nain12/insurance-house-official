@@ -4,13 +4,69 @@
 .container {
     display: flex;
     flex-direction: column;
-    width: 25%;
+    width: 20%;
     background-color: $backgroundColor;
-    border-radius: 5px;
+    border-radius: 16px;
+    
      
-    @include useDesktopLarge {
-        margin-top: 116px;
-        margin-left: 96px;
+    @include useMobile {
+        height: 50%;
+        margin: auto;
+        height: 24%;
+        width: 60%;
+    }
+    @include useTablet {
+        width: 30%;
+        height: 70%;
+    }
+    @include useDesktopSmall {
+        width: 20%;
         height: 80%;
     }
+    @include useDesktopLarge {
+        margin-top: 116px;
+        margin-left: 72px;
+        height: 70%;
+    }
+}
+
+.circle {
+    margin: 8% auto;
+    height: 96px;
+    width: 96px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.heading {
+  margin: 127% 4% 40% -16%;
+  width: 150%;
+  font-family: $fontStack;
+  font-weight: $fontSemiBold;
+  font-size: medium;
+  color: $fontColor;
+  text-align: center;
+}
+
+.description {
+    width: 200%;
+    margin-left: -44%;
+    font-family: $fontStack;
+    font-weight: $fontMedium;
+    color: $fontColor;
+    text-align: center;
+    line-height: 24px;
+
+}
+
+.name {
+    font-family: $fontStack;
+    font-weight: $fontMedium;
+    color: $fontColor;
+    text-align: center;
+    line-height: 24px;
+    width: 100%;
+    margin-top: 8%;
+    margin-left: -20%;
+    white-space: nowrap;
 }

@@ -1,12 +1,50 @@
 @import '../../variables.scss';
 @import '../../utility.scss';
 
+
+.testimonials {
+  background-color: $primaryColor;
+}
+
 .container {
   width: 100%;
-  background-color: $primaryColor;
   display: flex;
+  height: auto;
+  justify-content: space-evenly;
+
+  @include useMobile {
+    flex-direction: column;
+    height: 1500px;
+  }
+
+  @include useTablet {
+    flex-direction: row;
+    height: 448px;
+  }
+
+  @include useDesktopSmall {
+    height: 448px;
+  }
 
   @include useDesktopLarge {
         height: 500px;
+        padding-right: 10px
+  }
+}
+
+.heading {
+  text-align: center;
+  color: $navItemsColor;
+  font-family: $fontStack;
+  font-weight: $fontSemiBold;
+  letter-spacing: 0.2px;
+  font-size: 24px;
+  padding-top: 48px;
+
+  @include useTablet {
+    padding-bottom: 48px;
+  }
+  @include useDesktopSmall {
+    padding-bottom: 48px;
   }
 }
