@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/insurance-house-official/static/css/main.befa727e.chunk.css",
+    "main.css": "/insurance-house-official/static/css/main.6b02b01d.chunk.css",
     "main.js": "/insurance-house-official/static/js/main.5c9ec7d2.chunk.js",
     "main.js.map": "/insurance-house-official/static/js/main.5c9ec7d2.chunk.js.map",
     "runtime-main.js": "/insurance-house-official/static/js/runtime-main.85956c05.js",
@@ -10,13 +10,13 @@
     "static/js/3.1fc0cba8.chunk.js": "/insurance-house-official/static/js/3.1fc0cba8.chunk.js",
     "static/js/3.1fc0cba8.chunk.js.map": "/insurance-house-official/static/js/3.1fc0cba8.chunk.js.map",
     "index.html": "/insurance-house-official/index.html",
-    "static/css/main.befa727e.chunk.css.map": "/insurance-house-official/static/css/main.befa727e.chunk.css.map",
+    "static/css/main.6b02b01d.chunk.css.map": "/insurance-house-official/static/css/main.6b02b01d.chunk.css.map",
     "static/js/2.08fd0bdd.chunk.js.LICENSE.txt": "/insurance-house-official/static/js/2.08fd0bdd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.85956c05.js",
     "static/js/2.08fd0bdd.chunk.js",
-    "static/css/main.befa727e.chunk.css",
+    "static/css/main.6b02b01d.chunk.css",
     "static/js/main.5c9ec7d2.chunk.js"
   ]
 }
