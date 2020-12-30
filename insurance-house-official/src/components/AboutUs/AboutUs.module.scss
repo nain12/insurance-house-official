@@ -36,4 +36,9 @@
     text-align: left;
     line-height: 64px;
 
+    @include useMobile {
+        font-size: medium;
+        line-height: 32px;
+    }
+
 }
