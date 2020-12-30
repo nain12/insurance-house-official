@@ -79,7 +79,7 @@ button {
 }
 
 .contact-info {
-    display: flex;
+ /*    display: flex; */
     height: auto;
     align-items: center;  
     width: 50%;  
@@ -89,8 +89,6 @@ button {
         width: 80%;
         margin-top: 20%;
         margin-left: 0;
-        align-items: center; 
-        flex-direction: row;
     }
     @include useTablet {
         margin-top: 0;
@@ -116,9 +114,10 @@ button {
                 width: 75%;
                 
                 @include useMobile {
-                    display: inline-block;
-                    width: 90%;
+                    display: block;
+                    width: 256px;
                     line-height: 30px;
+                    white-space: pre-line;
                 }
                 @include useTablet {
                     display: inline-block;
