@@ -1,3 +1,4 @@
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @import '../../variables.scss';
 @import '../../utility.scss';
 
@@ -5,4 +6,125 @@
 .container {
     height: 500px;
     width: 100%;
+    display: flex;
+    @include useMobile {
+        flex-direction: column;
+    }
+}
+
+.heading {
+    text-align: center;
+    margin-top: 96px;
+    color: $fontColor;
+    font-family: $fontStack;
+    font-weight: $fontSemiBold;
+    font-size: 24px;
+}
+
+.contact-form {
+ display: inline-flex;
+ flex-direction: column;
+ width: 50%;
+ margin-top: 4%;
+ align-items: center;
+
+ @include useMobile {
+    width: 72%;
+    margin: auto;
+ }
+}
+
+form {
+    @include useMobile {
+        margin: auto;
+    }
+}
+label {
+    display: block;
+    margin-top: 8%;
+    color: $fontColor;
+    font-family: $fontStack;
+    font-weight: $fontMedium;
+    letter-spacing: 0.5px;
+    @include useMobile {
+        margin-left: 24px;
+        text-align: center;
+    }
+}
+input[type="text"] {
+    border: 1px solid $fontColor;
+    border-radius: 16px;
+    width: 320px;
+    height: 40px;
+    display: block;
+    margin-top: 8%;
+    text-align: center;
+    @include useMobile {
+        margin-left: 24px;
+    }
+}
+
+button {
+    margin-top: 14%;
+    padding: 12px;
+    color: $navItemsColor;
+    font-family: $fontStack;
+    font-weight: $fontSemiBold;
+    border-radius: 24px;
+    background-color: $ctaColor;
+    @include useMobile {
+        margin-left: 32%;
+    }
+}
+
+.contact-info {
+    display: flex;
+    height: auto;
+    align-items: center;  
+    width: 50%;  
+    @include useMobile {
+        width: 80%;
+        margin-top: 20%;
+        margin-left: 24%;
+        align-items: center; 
+    }
+    @include useTablet {
+        margin-top: 0;
+    }
+    @include useDesktopSmall {
+        margin-top: 0;
+    }
+    ul {
+        list-style: none;
+        li {
+            padding: 16px;
+            color: $fontColor;
+            font-family: $fontStack;
+            font-weight: $fontMedium;
+            letter-spacing: 0.2px;
+            p {
+                display: inline-block;
+                width: 75%;
+                @include useMobile {
+                    display: inline-block;
+                    width: 84%;
+                }
+                @include useTablet {
+                    display: inline-block;
+                }
+                @include useDesktopSmall {
+                    display: inline-block;
+                }
+            }
+            i {
+                    color: $primaryColor;
+                    margin: 8px;
+            }
+            a {
+                text-decoration: none;
+                color: $fontColor;
+                cursor: pointer;
+            }
+        }
+    }
 }
