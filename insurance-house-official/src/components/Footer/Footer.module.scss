@@ -1,0 +1,28 @@
+@import '../../variables.scss';
+@import '../../utility.scss';
+
+.container {
+    width: 100%;
+    background-color: $primaryColor;
+    height: 54px;
+    border-top: 4px solid $navItemsColor;
+}
+
+.text {
+    color: $navItemsColor;
+    text-align: center;
+    margin: auto;
+    font-family: $fontStack;
+    display: block;
+    font-size: small;
+    font-weight: $fontMedium;
+    padding-top: 1%;
+
+    @include useMobile {
+        padding-top: 4%;
+    }
+    @include useTablet {
+        padding-top: 4%;
+    }
+    
+}

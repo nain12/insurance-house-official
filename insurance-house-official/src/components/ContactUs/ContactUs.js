@@ -23,6 +23,7 @@ const ContactUs = () => {
                  <li><i className="fa fa-facebook"></i><a href="#">facebook.com</a></li>
                  <li><i className="fa fa-instagram"></i><a href="#">instagram.com</a></li>
                  <li><i className="fa fa-envelope"></i><p>deepuvalecha27@gmail.com</p></li>
+                 <li><i className="fa fa-mobile"></i><p>+91 9404583025</p></li>
                  <li><i className="fa fa-briefcase"></i><p>Office No.1, Laxmi Apartment, Baba Dholuram Darbar Road, Near Satyam Medical Store, Ulhasnagar- 421 001.</p></li>
              </ul>
             </div>

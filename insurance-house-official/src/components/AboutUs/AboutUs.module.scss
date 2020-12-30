@@ -1,0 +1,39 @@
+@import '../../variables.scss';
+@import '../../utility.scss';
+
+.heading {
+    text-align: center;
+    margin-top: 96px;
+    color: $fontColor;
+    font-family: $fontStack;
+    font-weight: $fontSemiBold;
+    font-size: 24px;
+}
+
+.container {
+    border: 10px solid $primaryColor;
+    border-radius: 5px;
+    margin-top: 4%;
+    @include useMobile {
+        margin-top: 100%;
+    }
+}
+
+.photo {
+    margin: 4% auto;
+    height: 108px;
+    width: 108px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.description {
+    width: 90%;
+    margin: auto 4%;
+    font-family: $fontStack;
+    font-weight: $fontMedium;
+    color: $fontColor;
+    text-align: left;
+    line-height: 64px;
+
+}
