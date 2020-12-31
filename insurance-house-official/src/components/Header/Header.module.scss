@@ -26,30 +26,32 @@
     color: $navItemsColor;
     font-family: $fontStack;
     font-weight: $fontSemiBold;
-    position: absolute;
+    position: relative;
    
     @include useMobile {
-        top: 2.5%;
-        left: 4%;
+        top: 26%;
+        left: 0%;
         transform: scale(0.90, 0.90);
     }
 
     @include useTablet {
-        top: 2%;
+        display: inline-block;
+        top: 20%;
         left: 1%;
         font-size: 16px;
         transform: scale(0.90, 0.90);
     }
 
     @include useDesktopSmall {
-        top: 2%;
+        display: inline-block;
+        top: 20%;
         left: 1%;
         font-size: 16px;
         transform: scale(0.90, 0.90);
     }
 
     @include useDesktopLarge {
-        top: 2%;
+        top: 16%;
         left: 2%;
         display: inline-block;
         width: 12%;
@@ -85,10 +87,10 @@
         display: block;
         border: 2px solid $navItemsColor;
         border-radius: 4px;
-        height: 32px;
+        height: 36px;
         width: 50px;
         float: right;
-        margin: 8px;
+        margin: -3% 4% 0 1%;
     }
 
     div {
@@ -108,8 +110,9 @@
         display: none;
         width: 100%;
         background-color: $primaryColor;
-        position: absolute;
-        top: 9%;
+        position: relative;
+        top: 35%;
+        z-index: 11;
     }
 }
 
@@ -126,21 +129,21 @@
         display: flex;
         margin-left: 20%;
         position: absolute;
-        top: 1%;
+        top: 8px;
     }
 
     @include useDesktopSmall {
         display: flex;
         margin-left: 20%;
         position: absolute;
-        top: 1%;
+        top: 8px;
     }
 
     @include useDesktopLarge {
         display: flex;
         margin-left: 20%;
         position: absolute;
-        top: 4%;
+        top: 1.5rem;
     }
     
     li {
@@ -188,22 +191,22 @@
   
     @include useMobile {
         display: block;
-        padding: 8px;
+        padding: 4px 8px 16px 8px;
         margin: 16px;
     }
 
     @include useTablet {
         position: absolute;
-        right: 0;
-        top: 3%;
+        right: 24px;
+        top: 20px;
         padding-right: 2%;
         font-size: 12px;
     }
 
     @include useDesktopSmall {
         position: absolute;
-        right: 0;
-        top: 3%;
+        right: 24px;
+        top: 20px;
         padding-right: 2%;
         font-size: 12px;
     }
@@ -211,7 +214,7 @@
     @include useDesktopLarge {
         position: absolute;
         right: 0;
-        top: 4%;
+        top: 1.5rem;
         padding-right: 4%;
     
     }

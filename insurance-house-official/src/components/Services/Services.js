@@ -3,19 +3,19 @@ import * as styles from './Services.module.scss';
 
 const logoContent = [
   {
-    logoIcon: 'images/logos/lic.png',
+    logoIcon: '/images/logos/lic.png',
     logoTitle: 'Life Insurance'
   },
   {
-    logoIcon: 'images/logos/hdfc-deposits.png',
+    logoIcon: '/images/logos/hdfc-deposits.png',
     logoTitle: 'Company Deposits'
   },
   {
-    logoIcon: 'images/logos/star-health.png',
+    logoIcon: '/images/logos/star-health.png',
     logoTitle: 'Mediclaim'
   },
   {
-    logoIcon: 'images/logos/bajaj-allianz.png',
+    logoIcon: '/images/logos/bajaj-allianz.png',
     logoTitle: 'Vehicle Insurance'
   }
 ]
@@ -28,7 +28,7 @@ const Services = () => {
             { logoContent.map((logo) => {
               return (
                   <div key={logo.Title} className={styles['logo-box']}>
-                    <img src={logo.logoIcon} className={styles.img}/>
+                    <img src={ process.env.PUBLIC_URL + logo.logoIcon } className={styles.img}/>
                     <p className={styles.description}>{logo.logoTitle}</p>
                   </div>
               )

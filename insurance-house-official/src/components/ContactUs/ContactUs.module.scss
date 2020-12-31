@@ -20,6 +20,10 @@
     font-family: $fontStack;
     font-weight: $fontSemiBold;
     font-size: 24px;
+
+    @include useMobile {
+        margin-top: 56px;
+    }
 }
 
 .contact-form {
@@ -65,7 +69,7 @@ input[type="text"] {
     }
 }
 
-button {
+.button {
     margin-top: 14%;
     padding: 12px;
     color: $navItemsColor;
@@ -79,7 +83,7 @@ button {
 }
 
 .contact-info {
- /*    display: flex; */
+    display: flex;
     height: auto;
     align-items: center;  
     width: 50%;  

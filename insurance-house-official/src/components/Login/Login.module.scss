@@ -1,0 +1,169 @@
+@import '../../variables.scss';
+@import '../../utility.scss';
+
+
+.footer-container {
+   @include useDesktopLarge {
+    position: relative;
+     height: 160vh;
+  } 
+ 
+}
+.container {
+    border: 1px solid $primaryColor;
+    height: 450px;
+    width: 500px; 
+    margin: 15% auto 25% auto;
+    border-radius: 10px;
+
+    @include useMobile {
+      width: 328px;
+      height: 360px;
+    }
+}
+
+.badge {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin: -12% auto;
+    background-color: $primaryColor;
+    position: relative;
+
+    @include useMobile {
+      height: 100px;
+      width: 100px;
+      margin: -14% 34%;
+    }
+}
+
+.person {
+  @include useMobile {
+  height: 60px;
+  width: 60px;
+  position: relative;
+  left: 20%;
+  top: 10%;
+  z-index: 10;
+  }
+
+  @include useTablet {
+    height: 64px;
+    width: 64px;
+    position: relative;
+    left: 22%;
+    top: 14%;
+    z-index: 10;
+    }
+
+    @include useDesktopSmall {
+      height: 64px;
+      width: 64px;
+      position: relative;
+      left: 22%;
+      top: 14%;
+      z-index: 10;
+    } 
+    
+    @include useDesktopLarge {
+      height: 72px;
+      width: 72px;
+      position: relative;
+      left: 20%;
+      top: 14%;
+      z-index: 10;
+    }
+  }
+
+.heading {
+    margin: auto;
+    font-family: $fontStack;
+    color: $fontColor;
+    font-weight: $fontSemiBold;
+    letter-spacing: 0.2px;
+    text-align: center;
+    margin-top: 16%;
+    font-size: 1.5rem;
+    
+    @include useMobile {
+      margin-bottom: 8%;
+    }
+}
+
+.form {
+  @include useMobile {
+    margin: -6%;
+  }
+}
+
+input[type='email'] {
+    font-family: $fontStack;
+    color: $fontColor;
+    font-weight: $fontMedium;
+    letter-spacing: 0.2px;
+    margin: 12% 16% 8% 16%;
+    width: 320px;
+    border: 1px solid $fontColor;
+    width: 320px;
+    height: 40px;
+    border-radius: 16px;
+    text-indent: 10px;
+
+    @include useMobile {
+      width: 264px;
+      margin: 8% 12%;
+    }
+}
+
+input[type='password'] {
+    border: 1px solid $fontColor;
+    border-radius: 16px;
+    width: 320px;
+    height: 40px;
+    margin-left: 16%;
+    text-indent: 10px;
+
+    @include useMobile {
+      width: 264px;
+      margin-left: 12%;
+    }
+}
+
+::placeholder {
+  color: rgba(112, 112, 112, 0.5);
+  font-family: $fontStack;
+  font-weight: $fontMedium;
+  letter-spacing: 0.2px;
+  font-size: 16px;
+  text-indent: 10px;
+}
+
+.link {
+  display: inline-block;
+  margin-left: 16%;
+  margin-top: 4%;
+  text-decoration: none;
+  font-family: $fontStack;
+  font-weight: $fontMedium;
+  letter-spacing: 0.2px;
+  color: $primaryColor;
+  cursor: pointer;  
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.button{
+  display: block;
+  margin: 8% auto;
+  padding: 12px;
+  color: $navItemsColor;
+  font-family: $fontStack;
+  font-weight: $fontSemiBold;
+  border-radius: 24px;
+  background-color: $ctaColor;
+  width: 25%;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}

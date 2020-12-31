@@ -3,9 +3,9 @@ import * as styles from './Footer.module.scss';
 
 const Footer = () => {
   return (
-      <div className={styles.container}>
+      <footer className={styles.container}>
        <p className={styles.text}>&#169;&nbsp;The Insurance House. All rights reserved.</p>
-      </div>
+      </footer>
   )
 }
 

@@ -6,6 +6,8 @@
     background-color: $primaryColor;
     height: 54px;
     border-top: 4px solid $navItemsColor;
+    position: absolute;
+    bottom: 0;
 }
 
 .text {
@@ -22,7 +24,7 @@
         padding-top: 4%;
     }
     @include useTablet {
-        padding-top: 4%;
+        padding-top: 2%;
     }
     
 }

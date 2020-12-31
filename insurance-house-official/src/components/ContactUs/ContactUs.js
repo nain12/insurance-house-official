@@ -14,7 +14,7 @@ const ContactUs = () => {
                 <input type="text"/>
                 <label id="email">Email</label>
                 <input type="text"/>
-                <button>SEND MESSAGE</button>
+                <button className={styles.button}>SEND MESSAGE</button>
             </form>
             </div>
             <div className={styles['contact-info']}>
