@@ -19,10 +19,10 @@ const Header = () => {
        <nav className={styles.navbar}>
         <ul className={styles['nav-list-items']}>
             <li><Link to='/insurance-house-official'>Home</Link></li>
-            <li><a href="#">Life Insurance</a></li>
-            <li><a href="#">Mediclaim</a></li>
-            <li><a href="#">Company Deposits</a></li>
-            <li><a href="#">Vehicle Insurance</a></li>
+            <li><Link to='/life-insurance'>Life Insurance</Link></li>
+            <li><Link to='/mediclaim'>Mediclaim</Link></li>
+            <li><Link to='/company-deposits'>Company Deposits</Link></li>
+            <li><Link to='/vehicle-insurance'>Vehicle Insurance</Link></li>
         </ul>
         <span className={styles.login}><Link to='/login'>LOGIN</Link></span>
        </nav>

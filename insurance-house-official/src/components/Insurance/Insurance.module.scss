@@ -1,0 +1,40 @@
+@import '../../variables.scss';
+@import '../../utility.scss';
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    border: 1px solid black;
+}
+.heading {
+    color: $fontColor;
+    font-family: $fontStack;
+    font-weight: $fontSemiBold;
+    margin-bottom: 32px;
+
+}
+
+.description-container {
+    height: 200px;
+    width: 600px;
+    margin: 8% 0 0 8%;
+}
+.description {
+    color: $fontColor;
+    font-family: $fontStack;
+    font-weight: $fontMedium; 
+    line-height: 32px;
+}
+.img {
+    height: 500px;
+    width: 500px;
+    margin: 4% 4% 16% 5%;
+}
+
+.logo {
+    margin-top: -14%;
+    margin-left: 20%;
+}
