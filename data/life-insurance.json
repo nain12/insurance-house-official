@@ -9,8 +9,8 @@
      "imgHeight": "400px",
      "imgMobileWidth": "300px",
      "imgMobileHeight": "200px",
-      "logoWidth": "",
-      "logoHeight": "",
-      "logoMobileWidth": "",
-      "logoMobileHeight": ""
+      "logoWidth": "300px",
+      "logoHeight": "300px",
+      "logoMobileWidth": "90%",
+      "logoMobileHeight": "60%"
 }

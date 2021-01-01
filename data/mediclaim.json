@@ -11,6 +11,6 @@
     "imgMobileHeight": "300px",
      "logoWidth": "",
      "logoHeight": "",
-     "logoMobileWidth": "",
-     "logoMobileHeight": ""
+     "logoMobileWidth": "90%",
+     "logoMobileHeight": "60%"
 }
