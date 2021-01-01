@@ -6,5 +6,11 @@
     "customerSatisfactionRate": "",
      "title": "Life Insurance",
      "imgWidth": "500px",
-     "imgHeight": "400px"
+     "imgHeight": "400px",
+     "imgMobileWidth": "300px",
+     "imgMobileHeight": "200px",
+      "logoWidth": "",
+      "logoHeight": "",
+      "logoMobileWidth": "",
+      "logoMobileHeight": ""
 }

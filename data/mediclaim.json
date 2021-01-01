@@ -6,5 +6,11 @@
     "customerSatisfactionRate": "",
     "title": "Mediclaim",
     "imgWidth": "500px",
-    "imgHeight": "500px"
+    "imgHeight": "500px",
+    "imgMobileWidth": "300px",
+    "imgMobileHeight": "300px",
+     "logoWidth": "",
+     "logoHeight": "",
+     "logoMobileWidth": "",
+     "logoMobileHeight": ""
 }
