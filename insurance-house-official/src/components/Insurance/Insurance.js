@@ -26,24 +26,28 @@ const Insurance = (props) => {
         <Header/>
         {isLoading
           ? <Loading/>
-          : (<div className={styles.container}>
+          : (<>
+          <div className={styles.container}>
          <div className={styles['description-container']}>
          <p className={styles.heading}>
              {data.title}
             </p>
          <p className={styles.description}>{data.description}</p>
          </div>
-         <img className={styles.img} style={{ width: data.imgWidth, height: data.imgHeight }} src={`${process.env.PUBLIC_URL}/${data.illustration}`}/>
+         <img className={styles.img} style={{ width: window.innerWidth > 515 ? data.imgWidth : data.imgMobileWidth, height: window.innerWidth > 515 ? data.imgHeight : data.imgMobileHeight }} src={`${process.env.PUBLIC_URL}/${data.illustration}`}/>
+         </div>
+         <div className={styles['logo-container']}>
          <img className={styles.logo} src={`${process.env.PUBLIC_URL}/${data.logo}`}/>
-       {/*   <p className={styles['policies-title']}>Best Selling Policies:</p> */}
-       {/*   <ul className={styles.policies}>
-          {data && data.policies.map(policy => {
+
+         <p className={styles['policies-title']}>Best Selling Policies</p>
+       </div>
+         <ul className={styles.policies}>
+          {data && data.policies && data.policies.map(policy => {
             return <li key={policy}>{policy}</li>
           })}
-         </ul> */}
-         </div>
-            )}
+         </ul>
         {/* <Footer/> */}
+        </>)}
         </div>
   )
 }

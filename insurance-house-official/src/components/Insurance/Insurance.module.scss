@@ -7,7 +7,11 @@
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    border: 1px solid black;
+
+    @include useMobile {
+        display: inline-flex;
+        flex-direction: column-reverse;
+    }
 }
 .heading {
     color: $fontColor;
@@ -21,20 +25,70 @@
     height: 200px;
     width: 600px;
     margin: 8% 0 0 8%;
+
+    @include useMobile {
+        width: 400px;
+    }
 }
 .description {
     color: $fontColor;
     font-family: $fontStack;
     font-weight: $fontMedium; 
     line-height: 32px;
+
+    @include useMobile {
+        width: 90%;
+    }
 }
 .img {
     height: 500px;
     width: 500px;
     margin: 4% 4% 16% 5%;
+
+    @include useMobile {
+        margin: auto;
+    }
+
+}
+
+.logo-container {
+    display: flex;
+
+    @include useMobile {
+        flex-direction: column;
+        margin-top: 72%;
+    }
 }
 
 .logo {
     margin-top: -14%;
     margin-left: 20%;
+
+    @include useMobile {
+        margin-left: 0;
+        width: 50%;
+        height: 50%;
+        margin: auto;   
+    }
+}
+
+.policies-title {
+
+    @include useMobile {
+    color: $fontColor;
+    font-family: $fontStack;
+    font-weight: $fontSemiBold;    
+    text-align: left;
+    margin: 8% 8% 6%;
+    }
+}
+
+.policies {
+    li {
+        list-style-type: disc;
+        margin: 2% 4% 4% 10%;
+        color: $fontColor;
+        font-family: $fontStack;
+        font-weight: $fontMedium;    
+    }
 }
