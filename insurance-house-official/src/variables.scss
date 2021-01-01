@@ -9,3 +9,15 @@ $fontMedium: 500;
 $fontSemiBold: 600;
 $fontBold: 700;
 $ctaColor: #3AD3D6;
+
+.title {
+    color: $fontColor;
+    font-family: $fontStack;
+    font-weight: $fontSemiBold;      
+}
+
+.text {
+    color: $fontColor;
+    font-family: $fontStack;
+    font-weight: $fontMedium; 
+}

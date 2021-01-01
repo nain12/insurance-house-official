@@ -14,10 +14,9 @@
     }
 }
 .heading {
-    color: $fontColor;
-    font-family: $fontStack;
-    font-weight: $fontSemiBold;
+    @extend .title;
     margin-bottom: 32px;
+    display: inline-block;
 
 }
 
@@ -27,17 +26,15 @@
     margin: 8% 0 0 8%;
 
     @include useMobile {
-        width: 400px;
+        width: 300px;
     }
 }
 .description {
-    color: $fontColor;
-    font-family: $fontStack;
-    font-weight: $fontMedium; 
+    @extend .text;
     line-height: 32px;
 
     @include useMobile {
-        width: 90%;
+        width: 100%;
     }
 }
 .img {
@@ -46,7 +43,7 @@
     margin: 4% 4% 16% 5%;
 
     @include useMobile {
-        margin: auto;
+        margin-left: auto 8%;
     }
 
 }
@@ -56,7 +53,7 @@
 
     @include useMobile {
         flex-direction: column;
-        margin-top: 72%;
+        margin-top: 100%;
     }
 }
 
@@ -65,7 +62,6 @@
     margin-left: 20%;
 
     @include useMobile {
-        margin-left: 0;
         width: 50%;
         height: 50%;
         margin: auto;   
@@ -73,24 +69,44 @@
 }
 
 .policies-title {
-
-    @include useMobile {
-    color: $fontColor;
-    font-family: $fontStack;
-    font-weight: $fontSemiBold;    
+    @extend .title; 
+    
+    @include useMobile { 
     text-align: left;
-    margin: 8% 8% 6%;
+    margin: 4% 8% 6%;
     }
 }
 
 .policies {
     li {
-        list-style-type: disc;
+        @extend .text;
         margin: 2% 4% 4% 10%;
-        color: $fontColor;
-        font-family: $fontStack;
-        font-weight: $fontMedium;   
         line-height: 16px;
  
+    }
+}
+
+.customer-satisfaction-rate-container {
+    display: flex;
+    margin-top: 0;
+
+    @include useMobile {
+        flex-direction: column;
+    }
+
+    img {
+        @include useMobile {
+            width: 90%;
+            height: 60%;
+            margin-left: -8%;
+        }
+    }
+
+    p {
+        @extend .title; 
+        @include useMobile {
+            text-align: left;
+            margin: 8% 8% 6%;
+        }
     }
 }

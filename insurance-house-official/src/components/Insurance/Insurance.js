@@ -40,12 +40,16 @@ const Insurance = (props) => {
          <img className={styles.logo} src={`${process.env.PUBLIC_URL}/${data.logo}`}/>
 
          <p className={styles['policies-title']}>Best Selling Policies</p>
-       </div>
          <ul className={styles.policies}>
           {data && data.policies && data.policies.map(policy => {
             return <li key={policy}>{policy}</li>
           })}
          </ul>
+         </div>
+        <div className={styles['customer-satisfaction-rate-container']}>
+        <img src={`${process.env.PUBLIC_URL}/images/illustrations/CustomerSatisfactionRate.png`}/>
+        <p>Customer satisfaction Rate</p>
+        </div>
         {/* <Footer/> */}
         </>)}
         </div>
