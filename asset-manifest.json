@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/insurance-house-official/static/css/main.56ca4994.chunk.css",
-    "main.js": "/insurance-house-official/static/js/main.a627b578.chunk.js",
-    "main.js.map": "/insurance-house-official/static/js/main.a627b578.chunk.js.map",
+    "main.js": "/insurance-house-official/static/js/main.ebc1123b.chunk.js",
+    "main.js.map": "/insurance-house-official/static/js/main.ebc1123b.chunk.js.map",
     "runtime-main.js": "/insurance-house-official/static/js/runtime-main.3e59ea36.js",
     "runtime-main.js.map": "/insurance-house-official/static/js/runtime-main.3e59ea36.js.map",
     "static/js/2.aa4c34c0.chunk.js": "/insurance-house-official/static/js/2.aa4c34c0.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.3e59ea36.js",
     "static/js/2.aa4c34c0.chunk.js",
     "static/css/main.56ca4994.chunk.css",
-    "static/js/main.a627b578.chunk.js"
+    "static/js/main.ebc1123b.chunk.js"
   ]
 }
