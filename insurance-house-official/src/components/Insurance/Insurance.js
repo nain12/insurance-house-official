@@ -42,7 +42,7 @@ const Insurance = (props) => {
          <p className={styles['policies-title']}>Best Selling Policies</p>
          <ul className={styles.policies}>
           {data && data.policies && data.policies.map(policy => {
-            return <li key={policy}>{policy}</li>
+            return <li key={policy}><p>{policy}</p></li>
           })}
          </ul>
          </div>
