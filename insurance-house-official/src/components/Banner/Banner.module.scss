@@ -3,12 +3,10 @@
 
 .banner {
     width: 100%;
-   
-    border: 1px solid black;
     background-repeat: no-repeat;
     background-size: contain;
     @include useMobile {
-        height: 133px;
+        height: 400px;
     }
     @include useTablet {
         height: 400px;

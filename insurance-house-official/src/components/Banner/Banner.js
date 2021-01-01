@@ -16,7 +16,7 @@ export default class Banner extends React.Component {
     this.intervalId = setInterval(() => {
       i = i === 5 ? 1 : i + 1;
       this.toggleImages(i)
-    }, 5000)
+    }, 10000)
   }
 
   componentWillUnmount () {
@@ -35,7 +35,7 @@ export default class Banner extends React.Component {
 
   render () {
     return (
-            <div className={styles.banner} style={{ background: window.innerWidth > 515 ? `url(${this.state.imgPath})` : `url(${this.state.mobImgPath})`, backgroundPosition: 'left center' }}>
+            <div className={styles.banner} style={{ background: window.innerWidth > 515 && window.innerWidth < 768 ? `url(${this.state.imgPath})` : `url(${this.state.mobImgPath}) no-repeat`, backgroundPosition: 'left center' }}>
             </div>
 
     )
