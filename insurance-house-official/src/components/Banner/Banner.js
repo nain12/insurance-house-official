@@ -5,7 +5,8 @@ export default class Banner extends React.Component {
   constructor () {
     super();
     this.state = {
-      imgPath: '/images/banner/BannerImage1.png'
+      imgPath: `${process.env.PUBLIC_URL}/images/banner/BannerImage1.png`,
+      mobImgPath: `${process.env.PUBLIC_URL}/images/banner/mobile/BannerImage1.png`
     }
     this.intervalId = 0;
   }
@@ -26,12 +27,15 @@ export default class Banner extends React.Component {
 
   toggleImages = (i) => {
     this.setState(
-      { imgPath: `/images/banner/BannerImage${i}.png` })
+      {
+        imgPath: `${process.env.PUBLIC_URL}/images/banner/BannerImage${i}.png`,
+        mobImgPath: `${process.env.PUBLIC_URL}/images/banner/mobile/BannerImage${i}.png`
+      })
   }
 
   render () {
     return (
-            <div className={styles.banner} /* style={{ background: `url(${this.state.imgPath})` }} */>
+            <div className={styles.banner} style={{ background: window.innerWidth > 515 ? `url(${this.state.imgPath})` : `url(${this.state.mobImgPath})`, backgroundPosition: 'left center' }}>
             </div>
 
     )
