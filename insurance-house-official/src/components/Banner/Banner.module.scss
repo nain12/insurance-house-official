@@ -7,6 +7,7 @@
     background-size: contain;
     @include useMobile {
         height: 400px;
+        width: 375px;
         margin: auto;
     }
     @include useTablet {
