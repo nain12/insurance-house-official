@@ -9,8 +9,18 @@
     position: relative;
 
     @include useMobile {
-        display: inline-flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
+    }
+
+    @include useDesktopLarge {
+        justify-content: space-evenly;
+    }
+
+    @include useTablet {
+
+    }
+    @include useDesktopSmall {
+        justify-content: space-evenly;
     }
 }
 .heading {
@@ -18,16 +28,36 @@
     margin-bottom: 32px;
     display: inline-block;
 
+    @include useMobile {
+        order: 2;
+    }
+
+    @include useTablet {
+
+    }
 }
 
 .description-container {
-    height: 200px;
-    width: 600px;
-    margin: 8% 0 0 8%;
-
     @include useMobile {
         width: 300px;
+        order: 3;
+        margin: 0 0 0 8%;
     }
+
+    @include useDesktopLarge {
+        height: 200px;
+        width: 600px;
+        margin: 8% 0 0 8%;
+        } 
+        
+        @include useTablet {
+            margin: 8% 0 0 8%;
+        }
+        @include useDesktopSmall {
+            height: 200px;
+            width: 600px;
+            margin: 8% 0 0 0;
+        }
 }
 .description {
     @extend .text;
@@ -38,41 +68,98 @@
         font-size: 16px;
     }
     @include useTablet {
-        width: 70%;
+        width: 60%;
     }
 }
+
 .img {
-    height: 500px;
+    height: 400px;
     width: 500px;
     margin: 4% 4% 16% 5%;
 
     @include useMobile {
-        margin: auto 8%;
+        height: 200px;
+        width: 300px;
+        order: 1;
+        margin: 4% 4% 8% 4%;
     }
     @include useTablet {
-        height: 300px;
-        width: 300px;
-        margin: -24% 70%;
+        height: 200px;
+        width: 200px;
+        margin: -38% 70%;
+    }
+
+    @include useDesktopLarge {
+        margin: 4%;
+    }
+
+    @include useDesktopSmall {
+        height: 250px;
+        width: 260px;
+        margin: 4% 0 4% 4%;
     }
 }
 
 .logo-container {
-    display: flex;
-
     @include useMobile {
-        flex-direction: column;
-        margin-top: 100%;
+        margin-top:8% auto;
+        order: 4;
     }
+
+    @include useDesktopLarge {
+        width: 800px;
+    }
+
+    @include useTablet {
+        margin: 8%;
+    }
+    @include useDesktopSmall {
+        width: 800px;
+    }
+
 }
 
 .logo {
-    margin-top: -14%;
-    margin-left: 20%;
-
     @include useMobile {
         width: 50%;
         height: 50%;
-        margin: auto;   
+        order: 4; 
+        margin: 12% 12% 8% 24%;
+    }
+
+    @include useDesktopLarge {
+        margin-top: 4%;
+        margin-left: 20%;
+    }
+
+    @include useTablet {
+
+    }
+    @include useDesktopSmall {
+        margin-top: 16%;
+        margin-left: 0%;
+    }
+}
+
+.policies-container {
+    @include useDesktopLarge {
+      margin: auto;
+      height: 200px;
+      width: 500px;
+    }
+
+    @include useMobile {
+        order: 5;
+        margin-top: 16%;
+    }
+
+    @include useTablet {
+      margin: 4% 0 0 8%;
+    }
+    @include useDesktopSmall {
+        margin: -16% 0 0 64%;
+        height: 200px;
+        width: 500px;
     }
 }
 
@@ -82,7 +169,19 @@
     @include useMobile { 
     text-align: left;
     margin: 8% 8% 6%;
+    order: 5;
     }
+
+    @include useTablet {
+        margin: 0 5% 8% 8%; 
+    }
+    @include useDesktopSmall {
+        margin: 0 5% 8% 8%;
+    }
+
+    @include useDesktopLarge {
+        margin: 0 5% 8% 8%;
+    } 
 }
 
 .policies {
@@ -94,32 +193,146 @@
         @include useMobile {
             font-size: 12px;
             letter-spacing: 0.5px;
+            order: 5;
+        }
+
+        @include useTablet {
+
+        }
+        @include useDesktopSmall {
+            margin: 2% 4% 4% 10%;
+            line-height: 16px;
         }
  
     }
 }
 
-.customer-satisfaction-rate-container {
-    display: flex;
-    margin-top: 0;
+.customer-satisfaction-container {
+    @include useDesktopLarge {
+        margin-left: 8%;
+        height: 200px;
+        width: 600px;
+        margin: 8% 0 0 8%;
+    }
 
     @include useMobile {
-        flex-direction: column;
+        order: 7;
     }
+    @include useTablet {
+        margin-left: 8%;
+    }
+    @include useDesktopSmall {
+        margin-left: 8%;
+        height: 200px;
+        width: 600px;
+        margin: 8% 0 0 -8%;
+    }
+}
 
+.customer-satisfaction-title {
+    @extend .title;
+
+    @include useDesktopLarge {
+        margin: 8% 5% 2% 0%;
+    }
+    @include useMobile {
+        order: 8;
+        margin-left: 8%;
+    }
+    @include useTablet {
+        margin: 4% 5% 2% 0%;
+    }
+    @include useDesktopSmall {
+        margin: 4% 5% 2% 0%;
+    }
+}
+
+.customer-satisfaction-description {
+    @extend .text;
+    line-height: 32px;
+
+    @include useMobile {
+        order: 9;
+        margin-top: 8%;
+        width: 300px;
+        margin-left: 8%;
+    }
+    @include useTablet {
+        width: 56%;
+    }
+    @include useDesktopSmall {
+        width: 64%;
+    }
+}
+.customer-satisfaction-image {
     img {
-        @include useMobile {
-            width: 90%;
-            height: 60%;
-            margin-left: -8%;
-        }
+    
+    @include useMobile {
+        width: 300px;
+        height: 250px;
+        margin-left: 8%;
     }
 
-    p {
-        @extend .title; 
-        @include useMobile {
-            text-align: left;
-            margin: 8% 8% 6%;
-        }
+    @include useDesktopLarge {
+        width: 500px;
+        height: 400px;
+        margin-top: 20%;
+        margin-left: 0%;
+        border-radius: 10%;
     }
+    @include useTablet {
+        width: 300px;
+        height: 250px;
+        position: absolute;
+        bottom: 10%;
+        left: 60%;
+    }
+    @include useDesktopSmall {
+        width: 300px;
+        height: 250px;
+        position: absolute;
+        bottom: -8%;
+        left: 60%;
+    }
+    }
+    @include useMobile {
+        order: 6;
+    }
+}
+
+.links {
+    @extend .text;
+
+    @include useMobile {
+        order: 10;
+        margin: 4% 0 0 8%;
+        line-height: 32px;
+    }
+    @include useTablet {
+        margin: 4% 0 0 0;
+    }
+    @include useDesktopSmall {
+        margin-top: 8%;
+    }
+    @include useDesktopLarge {
+    margin-top: 8%;
+    }
+}
+
+.footer-container {
+  position: relative;
+  
+  @include useMobile {
+      order: 11;
+      margin-top: 24%;
+  }
+  @include useTablet {
+    margin-top: 16%;    
+  }
+  @include useDesktopSmall {
+    margin-top: 40%;    
+  }
+  @include useDesktopLarge {
+  margin-top: 12%;
+  }
 }
