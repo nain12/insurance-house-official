@@ -39,7 +39,7 @@
 
 .description-container {
     @include useMobile {
-        width: 300px;
+        width: 324px;
         order: 3;
         margin: 0 0 0 8%;
     }
@@ -81,7 +81,8 @@
         height: 200px;
         width: 300px;
         order: 1;
-        margin: 4% 4% 8% 4%;
+       /*  margin: 4% 4% 8% 4%; */
+       margin: auto;
     }
     @include useTablet {
         height: 200px;
@@ -254,7 +255,7 @@
     @include useMobile {
         order: 9;
         margin-top: 8%;
-        width: 300px;
+        width: 324px;
         margin-left: 8%;
     }
     @include useTablet {
@@ -296,6 +297,7 @@
     }
     }
     @include useMobile {
+        margin: auto;
         order: 6;
     }
 }
