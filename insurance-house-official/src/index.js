@@ -1,12 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.scss';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+/* import axios from "axios";
+import Cookies from "js-cookie"; */
+import "./index.scss";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
+/* axios.defaults.headers.authorization = "Basic " + Cookies.get("token"); */
 ReactDOM.render(
     <App />,
-    document.getElementById('root')
+    document.getElementById("root")
 );
 
 // eslint-disable-next-line

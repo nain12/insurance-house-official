@@ -20,6 +20,10 @@
     ],
     "rules": {
         "semi": 0,
-        "indent": 2
+        "indent": 2,
+        "quotes": ["error", "double"],
+        "multiline-ternary": ["error", "never"],
+        "comma-dangle": ["error", "never"],
+        "react/prop-types": 0
     }
 }
