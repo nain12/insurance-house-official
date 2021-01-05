@@ -56,7 +56,7 @@ label {
         text-align: center;
     }
 }
-input[type="text"] {
+.name, .address, .email {
     border: 1px solid $fontColor;
     border-radius: 16px;
     width: 320px;

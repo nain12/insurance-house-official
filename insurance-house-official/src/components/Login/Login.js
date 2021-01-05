@@ -28,18 +28,24 @@ export default class Login extends React.Component {
 
   handleSubmit (event) {
     event.preventDefault();
-    this.setState({ loading: true });
+    this.setState({ isLoading: true });
     axios
       .post("http://localhost:5000/login", {
         email: this.state.email,
         password: this.state.password
-      }, { withCredentials: true })
+      }, {
+        headers: {
+          "Content-Type": "application/json"
+        },
+        withCredentials: true
+      })
       .then((response) => {
         if (response.data.email) {
-          this.setState({ loading: false });
           this.context.setIsAuthenticated(true, () => {
-            window.location.href = "/view-records";
+            /* window.location.href = "/view-records"; */
+            this.setState({ isLoading: false });
           });
+          this.props.history.replace("/view-records");
         /*   this.props.history.replace("/admin/view-records") */
         } else {
           alert("Invalid email address or password");
@@ -56,9 +62,9 @@ export default class Login extends React.Component {
   render () {
     return (
     <div className={styles["footer-container"]}>
+       <Header />
         { this.state.isLoading ? <Loading/> : (
         <>
-        <Header />
         <div className={styles.container}>
           <div className={styles.badge}>
             <img
@@ -91,9 +97,9 @@ export default class Login extends React.Component {
             </button>
           </form>
         </div>
-        <Footer />
       </>
         )}
+         <Footer />
     </div>
     );
   }

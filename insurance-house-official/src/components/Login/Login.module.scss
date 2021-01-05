@@ -167,4 +167,9 @@ input[type='password'] {
   width: 25%;
   font-size: 16px;
   letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.button:hover{
+  background-color: $primaryColor;
 }

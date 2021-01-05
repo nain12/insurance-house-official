@@ -8,8 +8,18 @@ const toggleNavigationMenu = () => {
   nav.style.display = nav.style.display === "block" ? "none" : "block";
 };
 
-const Header = () => {
+const getLoginComponent = (isLoggedInRef) => {
   const { isAuthenticated } = React.useContext(AuthContext);
+  isLoggedInRef.current = isAuthenticated;
+}
+
+const logoutHandler = (isLoggedInRef) => {
+  isLoggedInRef.current = false;
+}
+
+const Header = () => {
+  const { setIsAuthenticated } = React.useContext(AuthContext);
+  const isLoggedInRef = React.useRef(false);
   return (
     <div className={styles["navigation-bar"]}>
       <header className={styles.logo}>
@@ -39,7 +49,8 @@ const Header = () => {
           </li>
         </ul>
         <span className={styles.login}>
-          <Link to="/login">{ isAuthenticated ? "LOGOUT" : "LOGIN"}</Link>
+          { getLoginComponent(isLoggedInRef)}
+          { isLoggedInRef.current ? <Link to={"/insurance-house-official"} onClick={() => { logoutHandler(isLoggedInRef); setIsAuthenticated(false) } } >LOGOUT</Link> : <Link to={"/login"}>LOGIN</Link> }
         </span>
       </nav>
     </div>

@@ -9,11 +9,11 @@ const ContactUs = () => {
         <div className={styles["contact-form"]}>
           <form>
             <label id="name">Name</label>
-            <input type="text" />
+            <input type="text" className={styles.name}/>
             <label id="address">Address</label>
-            <input type="text" />
+            <input type="text" className={styles.address}/>
             <label id="email">Email</label>
-            <input type="text" />
+            <input type="text" className={styles.email}/>
             <button className={styles.button}>SEND MESSAGE</button>
           </form>
         </div>

@@ -1,2 +1,114 @@
 @import '../../variables.scss';
 @import '../../utility.scss';
+
+.container {
+    @include useMobile {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.heading {
+    @extend .title;
+    text-align: left;
+    display: inline-block;
+
+    @include useMobile {
+        display: block;
+        margin: 16px;
+        text-align: center;
+    }
+    @include useTablet {
+        margin: 24px;
+    } 
+    @include useDesktopSmall {
+        margin: 24px;
+    }
+    @include useDesktopLarge {
+        margin: 24px;
+    }
+}
+.table {
+    margin-top: 16px;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%; 
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+  }
+
+  .text{
+      display: inline;
+      border: 1px solid $fontColor;
+      border-radius: 16px;
+      width: 160px;
+      height: 40px;
+      margin-top: 16px;
+      text-align: center;
+     
+
+
+      @include useMobile {
+          margin: 0 auto;
+      }
+
+      @include useTablet {
+         position: absolute;
+          right: 108px;
+          margin: 24px;
+      }
+
+      @include useDesktopSmall {
+        position: absolute;
+        right: 108px;
+        margin: 24px;
+      }
+
+      @include useDesktopLarge {
+        position: absolute;
+        right: 108px;
+        margin: 24px;
+      }
+  }
+
+  .button {
+      @extend .text;
+      border-radius: 0;
+      width: 96px;
+      margin: 16px;
+      color: $navItemsColor;
+      background-color: $primaryColor;
+
+      @include useMobile {
+       display: block;
+       margin: 16px auto;
+    }
+
+    @include useTablet {
+        position: absolute;
+        right: 0;
+        margin: 24px;
+    }
+
+    @include useDesktopSmall {
+        position: absolute;
+        right: 0;
+        margin: 24px;
+    }
+
+    @include useDesktopLarge {
+        position: absolute;
+        right: 0;
+        margin: 24px;
+    }
+  }
+
+
+  

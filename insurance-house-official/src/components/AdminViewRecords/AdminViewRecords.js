@@ -1,9 +1,10 @@
 import React from "react";
 import axios from "axios";
+import Cookies from "js-cookie";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-/*
-import * as styles from './AdminViewRecords.module.scss'; */
+
+import * as styles from "./AdminViewRecords.module.scss";
 
 export default class AdminViewRecords extends React.Component {
   constructor () {
@@ -14,7 +15,12 @@ export default class AdminViewRecords extends React.Component {
   }
 
   componentDidMount () {
-    axios.get("http://localhost:5000/users").then(response => {
+    axios.get("http://localhost:5000/users", {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + Cookies.get("token")
+      }
+    }).then(response => {
       console.log("data", response.data);
       this.setState({
         records: response.data
@@ -24,9 +30,12 @@ export default class AdminViewRecords extends React.Component {
 
   render () {
     return (
-       <div>
+       <div className={styles.container}>
           <Header/>
-            <table>
+          <h2 className={styles.heading}>Customer Details</h2>
+          <input className={styles.text} type="text"/>
+          <button className={styles.button}>SEARCH</button>
+            <table className={styles.table}>
                 <tbody>
                     <tr>
                         <th>ID</th>
