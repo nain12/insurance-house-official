@@ -15,6 +15,7 @@ const getLoginComponent = (isLoggedInRef) => {
 
 const logoutHandler = (isLoggedInRef) => {
   isLoggedInRef.current = false;
+  localStorage.clear();
 }
 
 const Header = () => {
@@ -50,7 +51,7 @@ const Header = () => {
         </ul>
         <span className={styles.login}>
           { getLoginComponent(isLoggedInRef)}
-          { isLoggedInRef.current ? <Link to={"/insurance-house-official"} onClick={() => { logoutHandler(isLoggedInRef); setIsAuthenticated(false) } } >LOGOUT</Link> : <Link to={"/login"}>LOGIN</Link> }
+          { JSON.parse(localStorage.getItem("user")) ? <Link to={"/insurance-house-official"} onClick={() => { logoutHandler(isLoggedInRef); setIsAuthenticated(false) } } >LOGOUT</Link> : <Link to={"/login"}>LOGIN</Link> }
         </span>
       </nav>
     </div>

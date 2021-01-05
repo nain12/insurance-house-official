@@ -42,17 +42,19 @@ export default class Login extends React.Component {
       .then((response) => {
         if (response.data.email) {
           this.context.setIsAuthenticated(true, () => {
-            /* window.location.href = "/view-records"; */
             this.setState({ isLoading: false });
           });
+          window.localStorage.setItem("user", JSON.stringify(response.data));
           this.props.history.replace("/view-records");
-        /*   this.props.history.replace("/admin/view-records") */
         } else {
+          this.setState({ isLoading: false });
           alert("Invalid email address or password");
+          window.location.href = "/login";
         }
       })
       .catch((err) => {
         console.log(err);
+        this.setState({ isLoading: false });
         alert(
           "There was an error in processing the request. Please try again after some time." + err.message
         );
@@ -79,12 +81,14 @@ export default class Login extends React.Component {
               placeholder="Email address"
               value={this.state.email}
               onChange={(e) => this.handleChange(e, "email")}
+              required
             />
             <input
               type="password"
               placeholder="Password"
               value={this.state.password}
               onChange={(e) => this.handleChange(e, "password")}
+              required
             />
             <a className={styles.link} href="">
               Forgot password?
