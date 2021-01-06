@@ -16,6 +16,7 @@
         display: block;
         margin: 16px;
         text-align: center;
+        font-size: 16px;
     }
     @include useTablet {
         margin: 24px;
@@ -32,11 +33,18 @@
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%; 
-
+    @include useMobile {
+    table-layout: fixed;
+    }
     td, th {
         border: 1px solid #dddddd;
         text-align: left;
         padding: 8px;
+        @include useMobile {
+            font-size: 8px;
+            width: 8px;
+            overflow-wrap: break-word;
+        }
       }
       
       tr:nth-child(even) {
@@ -89,6 +97,7 @@
       @include useMobile {
        display: block;
        margin: 16px auto;
+       width: 80px;
     }
 
     @include useTablet {

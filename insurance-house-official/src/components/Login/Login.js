@@ -30,7 +30,7 @@ export default class Login extends React.Component {
     event.preventDefault();
     this.setState({ isLoading: true });
     axios
-      .post("https://insurance-house-official-back.herokuapp.com/login", {
+      .post("http://localhost:5000/login", {
         email: this.state.email,
         password: this.state.password
       }, {
@@ -56,7 +56,7 @@ export default class Login extends React.Component {
         console.log(err);
         this.setState({ isLoading: false });
         alert(
-          "There was an error in processing the request. Please try again after some time." + err.message
+          "There was an error in processing the request. Please try again after some time."
         );
       });
   }
