@@ -4,6 +4,7 @@ import Cookies from "js-cookie";
 import { Link } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import Loading from "../Loading/Loading";
 
 import * as styles from "./AdminViewRecords.module.scss";
 
@@ -11,11 +12,16 @@ export default class AdminViewRecords extends React.Component {
   constructor () {
     super();
     this.state = {
-      records: []
+      records: [],
+      isLoading: false
     }
   }
 
   componentDidMount () {
+    this.setState({
+      ...this.state,
+      isLoading: true
+    })
     axios.get("https://insurance-house-official-back.herokuapp.com/users", {
       headers: {
         "Content-Type": "application/json",
@@ -24,14 +30,22 @@ export default class AdminViewRecords extends React.Component {
     }).then(response => {
       console.log("data", response.data);
       this.setState({
-        records: response.data.result
+        records: response.data.result,
+        isLoading: false
       })
+    }).catch(err => {
+      this.setState({
+        ...this.state,
+        isLoading: false
+      })
+      console.log(err);
+      alert("Could not fetch records");
     })
   }
 
   render () {
     return (
-       <div className={styles.container}>
+      this.state.isLoading ? <Loading/> : (<div className={styles.container}>
           <Header/>
           <h2 className={styles.heading}>Customer Details</h2>
           <input className={styles.text} type="text"/>
@@ -57,7 +71,10 @@ export default class AdminViewRecords extends React.Component {
                            <td>{record.policy}</td>
                            <td>{record.uploads}</td>
                            <td>{record.comments}</td>
-                           <td><Link to="/insurance-house-official">Edit</Link> <Link to="/insurance-house-official">Delete</Link></td>
+                           <td><Link to={{
+                             pathname: "/view-record",
+                             state: record
+                           }}>Edit</Link> <Link to="/insurance-house-official">Delete</Link></td>
                            </tr>
                         )
                       })
@@ -65,7 +82,7 @@ export default class AdminViewRecords extends React.Component {
                 </tbody>
             </table>
             <Footer/>
-        </div>
+        </div>)
     )
   }
 }

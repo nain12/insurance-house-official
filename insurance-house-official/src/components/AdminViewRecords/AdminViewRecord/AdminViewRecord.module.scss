@@ -1,0 +1,184 @@
+@import '../../../variables.scss';
+@import '../../../utility.scss';
+
+.container {
+    border: 1px solid #dddddd;
+    border-radius: 16px;
+    @include useMobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 8% 16%;
+        }
+        @include useTablet {
+            margin: -24% 32%;
+            width: 50%;
+        }
+        @include useDesktopSmall {
+            margin: -18% 32%;
+            width: 50%;
+        }
+        @include useDesktopLarge {
+            margin: -16% 32%;
+            width: 50%;
+        }
+}
+
+.badge {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin: 6%;
+    background-color: $primaryColor;
+    position: relative;
+    display: inline-block;
+
+    @include useMobile {
+      height: 72px;
+      width: 72px;
+      margin: 8% 37%;
+    }
+}
+
+.person {
+  @include useMobile {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    left: 23%;
+    top: 16%;
+    z-index: 10;
+  }
+
+  @include useTablet {
+    height: 64px;
+    width: 64px;
+    position: relative;
+    left: 22%;
+    top: 14%;
+    z-index: 10;
+    }
+
+    @include useDesktopSmall {
+      height: 64px;
+      width: 64px;
+      position: relative;
+      left: 22%;
+      top: 14%;
+      z-index: 10;
+    } 
+    
+    @include useDesktopLarge {
+      height: 72px;
+      width: 72px;
+      position: relative;
+      left: 20%;
+      top: 14%;
+      z-index: 10;
+    }
+  }
+
+.heading {
+    @extend .title;
+    text-align: left;
+    display: inline-block;
+
+    @include useMobile {
+        display: block;
+        margin: 16px;
+        text-align: left;
+        font-size: 16px;
+        margin-left: 16%;
+    }
+    @include useTablet {
+        margin: 24px;
+    } 
+    @include useDesktopSmall {
+        margin: 24px;
+    }
+    @include useDesktopLarge {
+        margin: 24px 24px 24px 48px;
+    }
+}
+
+.name {
+    @extend .heading;
+    margin: 56px 24px 24px 16px;
+
+    @include useMobile {
+        margin: 48px auto;
+    }
+}
+.inputHeadings {
+    @extend .heading;
+    text-align: left;
+    margin-left: 0;
+    font-weight: $fontMedium;
+
+    @include useTablet {
+        margin: 24px 48px;
+    }
+    @include useDesktopSmall {
+        margin: 24px 48px;
+    }
+    @include useDesktopLarge {
+        margin: 24px 48px;
+    }
+}
+
+.id {
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    text-align: center;
+    height: 24px;
+    display: block;
+
+    @include useTablet {
+        height: 32px;
+        border-radius: 16px;
+        margin: 0 48px;
+        width: 75%;
+        text-align: left;
+        text-indent: 16px;
+        font-size: medium;
+    }
+
+    @include useDesktopSmall {
+        height: 32px;
+        border-radius: 16px;
+        margin: 0 48px;
+        width: 75%;
+        text-align: left;
+        text-indent: 16px;
+        font-size: medium;
+    }
+    @include useDesktopLarge {
+       
+        height: 32px;
+        border-radius: 16px;
+        margin: 0 48px;
+        width: 75%;
+        text-align: left;
+        text-indent: 16px;
+        font-size: medium;
+    }
+}
+
+.button{
+    display: block;
+    margin: 8% auto;
+    padding: 12px;
+    color: $navItemsColor;
+    font-family: $fontStack;
+    font-weight: $fontSemiBold;
+    border-radius: 24px;
+    background-color: $ctaColor;
+    width: 25%;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+
+    @include useMobile {
+        width: 50%;
+    }
+  }

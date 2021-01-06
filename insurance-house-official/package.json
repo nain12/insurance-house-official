@@ -1,6 +1,6 @@
 {
   "name": "insurance-house-official",
-  "homepage": "http://nain12.github.io/insurance-house-official",
+  "homepage": "https://insurance-house-official.herokuapp.com/insurance-house-official",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
