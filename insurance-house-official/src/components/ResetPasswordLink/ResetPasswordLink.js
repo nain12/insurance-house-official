@@ -13,9 +13,9 @@ const sendResetPasswordLink = (event, email) => {
       email: email
     }, {
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
         /* Authorization: "Bearer " + Cookies.get("token") */
-        Authorization: "Bearer " + JSON.parse(localStorage.getItem("user")).token
+        /*  Authorization: "Bearer " + JSON.parse(localStorage.getItem("user")).token */
       },
       withCredentials: true
     })

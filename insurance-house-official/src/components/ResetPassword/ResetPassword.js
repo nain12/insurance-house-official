@@ -24,9 +24,9 @@ export default class ResetPassword extends React.Component {
         token: token
       }, {
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json"
           /* Authorization: "Bearer " + Cookies.get("token") */
-          Authorization: "Bearer " + JSON.parse(localStorage.getItem("user")).token
+          /* Authorization: "Bearer " + JSON.parse(localStorage.getItem("user")).token */
         },
         withCredentials: true
       })
@@ -53,9 +53,9 @@ export default class ResetPassword extends React.Component {
            password: this.state.password
          }, {
            headers: {
-             "Content-Type": "application/json",
+             "Content-Type": "application/json"
              /* Authorization: "Bearer " + Cookies.get("token") */
-             Authorization: "Bearer " + JSON.parse(localStorage.getItem("user")).token
+             /* Authorization: "Bearer " + JSON.parse(localStorage.getItem("user")).token */
            },
            withCredentials: true
          })
