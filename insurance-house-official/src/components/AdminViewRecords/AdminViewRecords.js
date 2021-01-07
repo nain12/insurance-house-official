@@ -1,5 +1,5 @@
 import React from "react";
-import axios from "axios";
+/* import axios from "axios"; */
 import Cookies from "js-cookie";
 import { Link } from "react-router-dom";
 import Header from "../Header/Header";
@@ -22,7 +22,7 @@ export default class AdminViewRecords extends React.Component {
       ...this.state,
       isLoading: true
     })
-    axios.get("https://insurance-house-official-back.herokuapp.com/users", {
+    /*  axios.get("http://localhost:5000/users", {
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + Cookies.get("token")
@@ -41,7 +41,27 @@ export default class AdminViewRecords extends React.Component {
       })
       console.log(err);
       alert("Could not fetch records");
-    })
+    }) */
+    fetch("https://insurance-house-official-back.herokuapp.com/users", {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + Cookies.get("token")
+      },
+      credentials: "include"
+    }).then(response => response.json())
+      .then(response => {
+        this.setState({
+          records: response.result,
+          isLoading: false
+        })
+      }).catch(err => {
+        this.setState({
+          ...this.state,
+          isLoading: false
+        })
+        console.log(err);
+        alert("Could not fetch records");
+      })
   }
 
   render () {

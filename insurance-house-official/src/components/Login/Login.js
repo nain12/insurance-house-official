@@ -1,5 +1,5 @@
 import React from "react";
-import axios from "axios";
+/* import axios from "axios"; */
 import { Link } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
@@ -30,7 +30,7 @@ export default class Login extends React.Component {
   handleSubmit (event) {
     event.preventDefault();
     this.setState({ isLoading: true });
-    axios
+    /*  axios
       .post("https://insurance-house-official-back.herokuapp.com/login", {
         email: this.state.email,
         password: this.state.password
@@ -47,6 +47,39 @@ export default class Login extends React.Component {
             this.setState({ isLoading: false });
           });
           window.localStorage.setItem("user", JSON.stringify(response.data));
+          this.props.history.replace("/view-records");
+        } else {
+          this.setState({ isLoading: false });
+          alert("Invalid email address or password");
+          window.location.href = "/login";
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+        this.setState({ isLoading: false });
+        alert(
+          "There was an error in processing the request. Please try again after some time."
+        );
+      }); */
+    const data = {
+      email: this.state.email,
+      password: this.state.password
+    };
+    fetch("https://insurance-house-official-back.herokuapp.com/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data),
+      credentials: "include"
+    })
+      .then((response) => response.json())
+      .then((response) => {
+        if (response.email) {
+          this.context.setIsAuthenticated(true, () => {
+            this.setState({ isLoading: false });
+          });
+          window.localStorage.setItem("user", JSON.stringify(response));
           this.props.history.replace("/view-records");
         } else {
           this.setState({ isLoading: false });
