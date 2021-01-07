@@ -45,7 +45,8 @@ export default class AdminViewRecords extends React.Component {
     fetch("https://insurance-house-official-back.herokuapp.com/users", {
       headers: {
         "Content-Type": "application/json",
-        Authorization: "Bearer " + Cookies.get("token")
+       /*  Authorization: "Bearer " + Cookies.get("token") */
+        Authorization: "Bearer " + JSON.parse(localStorage.getItem("user")).token 
       },
       credentials: "include"
     }).then(response => response.json())
