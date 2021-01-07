@@ -1,5 +1,5 @@
 import React from "react";
-import Cookies from "js-cookie";
+/* import Cookies from "js-cookie"; */
 import axios from "axios";
 import Header from "../../Header/Header";
 import Footer from "../../Footer/Footer";
@@ -47,8 +47,8 @@ export default class AdminViewRecord extends React.Component {
         .post("https://insurance-house-official-back.herokuapp.com/update-user", data, {
           headers: {
             "Content-Type": "application/json",
-           /*  Authorization: "Bearer " + Cookies.get("token") */
-           Authorization: "Bearer " + JSON.parse(localStorage.getItem("user")).token 
+            /*  Authorization: "Bearer " + Cookies.get("token") */
+            Authorization: "Bearer " + JSON.parse(localStorage.getItem("user")).token
           },
           withCredentials: true
         })

@@ -1,6 +1,6 @@
 import React from "react";
 /* import axios from "axios"; */
-import Cookies from "js-cookie";
+/* import Cookies from "js-cookie"; */
 import { Link } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
@@ -45,8 +45,8 @@ export default class AdminViewRecords extends React.Component {
     fetch("https://insurance-house-official-back.herokuapp.com/users", {
       headers: {
         "Content-Type": "application/json",
-       /*  Authorization: "Bearer " + Cookies.get("token") */
-        Authorization: "Bearer " + JSON.parse(localStorage.getItem("user")).token 
+        /*  Authorization: "Bearer " + Cookies.get("token") */
+        Authorization: "Bearer " + JSON.parse(localStorage.getItem("user")).token
       },
       credentials: "include"
     }).then(response => response.json())
