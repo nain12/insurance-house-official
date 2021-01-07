@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/insurance-house-official/static/css/main.5a72c150.chunk.css",
-    "main.js": "/insurance-house-official/static/js/main.7b167b60.chunk.js",
-    "main.js.map": "/insurance-house-official/static/js/main.7b167b60.chunk.js.map",
-    "runtime-main.js": "/insurance-house-official/static/js/runtime-main.15cd8327.js",
-    "runtime-main.js.map": "/insurance-house-official/static/js/runtime-main.15cd8327.js.map",
-    "static/js/2.3cc57547.chunk.js": "/insurance-house-official/static/js/2.3cc57547.chunk.js",
-    "static/js/2.3cc57547.chunk.js.map": "/insurance-house-official/static/js/2.3cc57547.chunk.js.map",
-    "static/js/3.3875bdc2.chunk.js": "/insurance-house-official/static/js/3.3875bdc2.chunk.js",
-    "static/js/3.3875bdc2.chunk.js.map": "/insurance-house-official/static/js/3.3875bdc2.chunk.js.map",
+    "main.css": "/insurance-house-official/static/css/main.c47f5eb0.chunk.css",
+    "main.js": "/insurance-house-official/static/js/main.6166e621.chunk.js",
+    "main.js.map": "/insurance-house-official/static/js/main.6166e621.chunk.js.map",
+    "runtime-main.js": "/insurance-house-official/static/js/runtime-main.f0be91fa.js",
+    "runtime-main.js.map": "/insurance-house-official/static/js/runtime-main.f0be91fa.js.map",
+    "static/js/2.ca6137b3.chunk.js": "/insurance-house-official/static/js/2.ca6137b3.chunk.js",
+    "static/js/2.ca6137b3.chunk.js.map": "/insurance-house-official/static/js/2.ca6137b3.chunk.js.map",
+    "static/js/3.51b5e7ab.chunk.js": "/insurance-house-official/static/js/3.51b5e7ab.chunk.js",
+    "static/js/3.51b5e7ab.chunk.js.map": "/insurance-house-official/static/js/3.51b5e7ab.chunk.js.map",
     "index.html": "/insurance-house-official/index.html",
-    "static/css/main.5a72c150.chunk.css.map": "/insurance-house-official/static/css/main.5a72c150.chunk.css.map",
-    "static/js/2.3cc57547.chunk.js.LICENSE.txt": "/insurance-house-official/static/js/2.3cc57547.chunk.js.LICENSE.txt"
+    "static/css/main.c47f5eb0.chunk.css.map": "/insurance-house-official/static/css/main.c47f5eb0.chunk.css.map",
+    "static/js/2.ca6137b3.chunk.js.LICENSE.txt": "/insurance-house-official/static/js/2.ca6137b3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.15cd8327.js",
-    "static/js/2.3cc57547.chunk.js",
-    "static/css/main.5a72c150.chunk.css",
-    "static/js/main.7b167b60.chunk.js"
+    "static/js/runtime-main.f0be91fa.js",
+    "static/js/2.ca6137b3.chunk.js",
+    "static/css/main.c47f5eb0.chunk.css",
+    "static/js/main.6166e621.chunk.js"
   ]
 }
