@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/insurance-house-official/static/css/main.c47f5eb0.chunk.css",
-    "main.js": "/insurance-house-official/static/js/main.52be3ccf.chunk.js",
-    "main.js.map": "/insurance-house-official/static/js/main.52be3ccf.chunk.js.map",
+    "main.js": "/insurance-house-official/static/js/main.f6b8fdff.chunk.js",
+    "main.js.map": "/insurance-house-official/static/js/main.f6b8fdff.chunk.js.map",
     "runtime-main.js": "/insurance-house-official/static/js/runtime-main.f0be91fa.js",
     "runtime-main.js.map": "/insurance-house-official/static/js/runtime-main.f0be91fa.js.map",
-    "static/js/2.ca6137b3.chunk.js": "/insurance-house-official/static/js/2.ca6137b3.chunk.js",
-    "static/js/2.ca6137b3.chunk.js.map": "/insurance-house-official/static/js/2.ca6137b3.chunk.js.map",
+    "static/js/2.d65b5f4a.chunk.js": "/insurance-house-official/static/js/2.d65b5f4a.chunk.js",
+    "static/js/2.d65b5f4a.chunk.js.map": "/insurance-house-official/static/js/2.d65b5f4a.chunk.js.map",
     "static/js/3.51b5e7ab.chunk.js": "/insurance-house-official/static/js/3.51b5e7ab.chunk.js",
     "static/js/3.51b5e7ab.chunk.js.map": "/insurance-house-official/static/js/3.51b5e7ab.chunk.js.map",
     "index.html": "/insurance-house-official/index.html",
     "static/css/main.c47f5eb0.chunk.css.map": "/insurance-house-official/static/css/main.c47f5eb0.chunk.css.map",
-    "static/js/2.ca6137b3.chunk.js.LICENSE.txt": "/insurance-house-official/static/js/2.ca6137b3.chunk.js.LICENSE.txt"
+    "static/js/2.d65b5f4a.chunk.js.LICENSE.txt": "/insurance-house-official/static/js/2.d65b5f4a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f0be91fa.js",
-    "static/js/2.ca6137b3.chunk.js",
+    "static/js/2.d65b5f4a.chunk.js",
     "static/css/main.c47f5eb0.chunk.css",
-    "static/js/main.52be3ccf.chunk.js"
+    "static/js/main.f6b8fdff.chunk.js"
   ]
 }
