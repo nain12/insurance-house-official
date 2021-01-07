@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import AuthContext from "../../util/auth-context";
@@ -30,14 +31,15 @@ export default class Login extends React.Component {
     event.preventDefault();
     this.setState({ isLoading: true });
     axios
-      .post("https://insurance-house-official-back.herokuapp.com/login", {
+      .post("http://localhost:5000/login", {
         email: this.state.email,
         password: this.state.password
       }, {
+        withCredentials: true
+      }, {
         headers: {
           "Content-Type": "application/json"
-        },
-        withCredentials: true
+        }
       })
       .then((response) => {
         if (response.data.email) {
@@ -79,6 +81,7 @@ export default class Login extends React.Component {
             <input
               type="email"
               placeholder="Email address"
+              className={styles.email}
               value={this.state.email}
               onChange={(e) => this.handleChange(e, "email")}
               required
@@ -88,11 +91,12 @@ export default class Login extends React.Component {
               placeholder="Password"
               value={this.state.password}
               onChange={(e) => this.handleChange(e, "password")}
+              className={styles.password}
               required
             />
-            <a className={styles.link} href="">
+            <Link to="/reset-password-link" className={styles.link}>
               Forgot password?
-            </a>
+            </Link>
             <button
               className={styles.button}
               onClick={(e) => this.handleSubmit(e)}

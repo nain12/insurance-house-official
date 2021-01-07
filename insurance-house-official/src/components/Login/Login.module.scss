@@ -97,7 +97,7 @@
   }
 }
 
-input[type='email'] {
+.email {
     font-family: $fontStack;
     color: $fontColor;
     font-weight: $fontMedium;
@@ -116,7 +116,7 @@ input[type='email'] {
     }
 }
 
-input[type='password'] {
+.password {
     border: 1px solid $fontColor;
     border-radius: 16px;
     width: 320px;

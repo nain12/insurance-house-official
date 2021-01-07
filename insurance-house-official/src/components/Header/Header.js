@@ -49,6 +49,7 @@ const Header = () => {
             <Link to="/vehicle-insurance">Vehicle Insurance</Link>
           </li>
         </ul>
+        <span className={styles.register}><Link to="/insurance-house-official">REGISTER</Link></span>
         <span className={styles.login}>
           { getLoginComponent(isLoggedInRef)}
           { JSON.parse(localStorage.getItem("user")) ? <Link to={"/insurance-house-official"} onClick={() => { logoutHandler(isLoggedInRef); setIsAuthenticated(false) } } >LOGOUT</Link> : <Link to={"/login"}>LOGIN</Link> }

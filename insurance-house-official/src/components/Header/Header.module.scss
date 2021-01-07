@@ -129,7 +129,7 @@
         display: flex;
         margin-left: 20%;
         position: absolute;
-        top: 8px;
+        top: 16px;
     }
 
     @include useDesktopSmall {
@@ -157,7 +157,7 @@
 
         @include useTablet {
             padding: 4px;
-            margin: 8px;
+            margin: 0px;
         }
 
         @include useDesktopSmall {
@@ -199,7 +199,7 @@
         position: absolute;
         right: 24px;
         top: 20px;
-        padding-right: 2%;
+        padding-right: 0;
         font-size: 12px;
     }
 
@@ -219,6 +219,49 @@
     
     }
 
+    a {
+        text-decoration: none;
+        color: $navItemsColor;
+        cursor: pointer;
+    }
+}
+
+.register {
+    color: $navItemsColor;
+    font-family: $fontStack;
+    font-weight: $fontMedium;
+    font-size: 14px;
+
+    @include useMobile {
+        display: block;
+        padding: 4px 8px 4px 8px;
+        margin: 16px;
+    }
+
+    @include useTablet {
+        position: absolute;
+        right: 84px;
+        top: 20px;
+        padding-right: 0;
+        font-size: 12px;
+    }
+
+    @include useDesktopSmall {
+        position: absolute;
+        right: 84px;
+        top: 20px;
+        padding-right: 2%;
+        font-size: 12px;
+    }
+
+    @include useDesktopLarge {
+    position: absolute;
+    right: 96px;
+    top: 24px;
+    padding-right: 2%;
+    font-size: 14px;
+    }
+   
     a {
         text-decoration: none;
         color: $navItemsColor;
