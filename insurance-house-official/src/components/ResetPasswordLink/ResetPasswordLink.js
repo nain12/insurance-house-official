@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import Cookies from "js-cookie";
+/* import Cookies from "js-cookie"; */
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
@@ -14,7 +14,8 @@ const sendResetPasswordLink = (event, email) => {
     }, {
       headers: {
         "Content-Type": "application/json",
-        Authorization: "Bearer " + Cookies.get("token")
+        /* Authorization: "Bearer " + Cookies.get("token") */
+        Authorization: "Bearer " + JSON.parse(localStorage.getItem("user")).token
       },
       withCredentials: true
     })

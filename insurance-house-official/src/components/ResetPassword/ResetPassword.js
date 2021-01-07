@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import Cookies from "js-cookie";
+/* import Cookies from "js-cookie"; */
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Loading from "../Loading/Loading";
@@ -25,7 +25,8 @@ export default class ResetPassword extends React.Component {
       }, {
         headers: {
           "Content-Type": "application/json",
-          Authorization: "Bearer " + Cookies.get("token")
+          /* Authorization: "Bearer " + Cookies.get("token") */
+          Authorization: "Bearer " + JSON.parse(localStorage.getItem("user")).token
         },
         withCredentials: true
       })
@@ -53,7 +54,8 @@ export default class ResetPassword extends React.Component {
          }, {
            headers: {
              "Content-Type": "application/json",
-             Authorization: "Bearer " + Cookies.get("token")
+             /* Authorization: "Bearer " + Cookies.get("token") */
+             Authorization: "Bearer " + JSON.parse(localStorage.getItem("user")).token
            },
            withCredentials: true
          })
