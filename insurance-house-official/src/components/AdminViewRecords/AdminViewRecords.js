@@ -26,7 +26,8 @@ export default class AdminViewRecords extends React.Component {
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + Cookies.get("token")
-      }
+      },
+      withCredentials: true
     }).then(response => {
       console.log("data", response.data);
       this.setState({
