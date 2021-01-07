@@ -44,7 +44,7 @@ export default class AdminViewRecord extends React.Component {
       })
 
       axios
-        .post("http://localhost:5000/update-user", data, {
+        .post("https://insurance-house-official-back.herokuapp.com/update-user", data, {
           headers: {
             "Content-Type": "application/json",
             Authorization: "Bearer " + Cookies.get("token")

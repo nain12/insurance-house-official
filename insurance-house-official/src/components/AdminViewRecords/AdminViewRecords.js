@@ -22,7 +22,7 @@ export default class AdminViewRecords extends React.Component {
       ...this.state,
       isLoading: true
     })
-    axios.get("http://localhost:5000/users", {
+    axios.get("https://insurance-house-official-back.herokuapp.com/users", {
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + Cookies.get("token")
