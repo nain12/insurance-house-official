@@ -76,6 +76,7 @@ export default class Login extends React.Component {
       .then((response) => response.json())
       .then((response) => {
         if (response.email) {
+          localStorage.setItem("login", JSON.stringify(response));
           this.context.setIsAuthenticated(true, () => {
             this.setState({ isLoading: false });
           });
