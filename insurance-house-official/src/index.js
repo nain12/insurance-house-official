@@ -1,12 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-/* import axios from "axios";
-import Cookies from "js-cookie"; */
+import axios from "axios";
 import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-/* axios.defaults.headers.authorization = "Basic " + Cookies.get("token"); */
+axios.defaults.baseURL = "http://31.220.51.195";
 ReactDOM.render(
     <App />,
     document.getElementById("root")

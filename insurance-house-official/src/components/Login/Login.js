@@ -65,7 +65,7 @@ export default class Login extends React.Component {
       email: this.state.email,
       password: this.state.password
     };
-    fetch("https://insurance-house-official-back.herokuapp.com/login", {
+    fetch("http://31.220.51.195/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

@@ -13,10 +13,22 @@ const Insurance = (props) => {
   React.useEffect(() => {
     setIsLoading(true);
     const { name } = props.match.params;
-    fetch(`${process.env.PUBLIC_URL}/data/${name}.json`).then((response) => {
+    fetch(`${process.env.PUBLIC_URL}/data/${name}.json`,
+      {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        }
+      }).then((response) => {
       response.json().then((result) => {
         setData(result);
         setIsLoading(false);
+      }).catch(err => {
+        console.log(err);
+        setIsLoading(false);
+        alert("There was an error while loading the page.");
+        window.location.href = "/";
       });
     });
   }, []);

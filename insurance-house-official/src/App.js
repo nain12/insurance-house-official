@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
 import Insurance from "./components/Insurance/Insurance";
@@ -27,6 +27,7 @@ function App () {
           path="/:name"
           render={(props) => <Insurance {...props} key={props.location.key} />}
         />
+        <Redirect to="/insurance-house-official" from="/"/>
       </Switch>
     </BrowserRouter>
     </AuthContext.Provider>

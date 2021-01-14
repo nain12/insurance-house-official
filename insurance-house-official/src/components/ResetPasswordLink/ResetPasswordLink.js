@@ -9,7 +9,7 @@ import * as styles from "./ResetPasswordLink.module.scss";
 const sendResetPasswordLink = (event, email) => {
   event.preventDefault();
   axios
-    .post("https://insurance-house-official-back.herokuapp.com/send-mail", {
+    .post("/send-mail", {
       email: email
     }, {
       headers: {

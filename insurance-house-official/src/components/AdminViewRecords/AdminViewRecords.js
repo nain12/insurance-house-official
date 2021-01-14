@@ -42,7 +42,7 @@ export default class AdminViewRecords extends React.Component {
       console.log(err);
       alert("Could not fetch records");
     }) */
-    fetch("https://insurance-house-official-back.herokuapp.com/users", {
+    fetch("http://31.220.51.195/users", {
       headers: {
         "Content-Type": "application/json",
         /*  Authorization: "Bearer " + Cookies.get("token") */

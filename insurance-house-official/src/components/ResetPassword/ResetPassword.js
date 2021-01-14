@@ -20,7 +20,7 @@ export default class ResetPassword extends React.Component {
   componentDidMount () {
     const token = this.props.location.search.split("?")[1];
     axios
-      .post("https://insurance-house-official-back.herokuapp.com/reset-password", {
+      .post("/reset-password", {
         token: token
       }, {
         headers: {
@@ -48,7 +48,7 @@ export default class ResetPassword extends React.Component {
      setResetPassword = () => {
        this.setState({ isLoading: true })
        axios
-         .post("https://insurance-house-official-back.herokuapp.com/change-password", {
+         .post("/change-password", {
            email: this.state.email,
            password: this.state.password
          }, {
