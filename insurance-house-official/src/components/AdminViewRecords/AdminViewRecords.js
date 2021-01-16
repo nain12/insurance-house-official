@@ -71,10 +71,10 @@ export default class AdminViewRecords extends React.Component {
                            <td>{record.policy}</td>
                            <td>{record.uploads}</td>
                            <td>{record.comments}</td>
-                           <td><Link to={{
+                           <td><Link className={styles.edit} to={{
                              pathname: "/view-record",
                              state: record
-                           }}>Edit</Link> <Link to="/insurance-house-official">Delete</Link></td>
+                           }}>Edit</Link> <Link className={styles.delete} to="/insurance-house-official">Delete</Link></td>
                            </tr>
                         )
                       })

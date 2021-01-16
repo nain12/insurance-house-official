@@ -2,6 +2,8 @@
 @import '../../utility.scss';
 
 .container {
+    height: 200vh;
+    position: relative;
     @include useMobile {
         display: flex;
         flex-direction: column;
@@ -42,7 +44,7 @@
         text-align: left;
         padding: 8px;
         @include useMobile {
-            font-size: 8px;
+            font-size: 10px;
             width: 8px;
             overflow-wrap: break-word;
         }
@@ -51,6 +53,17 @@
       tr:nth-child(even) {
         background-color: #dddddd;
       }
+  }
+
+  .edit,.delete {
+        color: $primaryColor;
+        text-decoration: none;
+        font-family: $fontStack;
+        font-weight: $fontSemiBold;
+  }
+
+  .edit:hover, .delete:hover {
+      text-decoration: underline;
   }
 
   .text{

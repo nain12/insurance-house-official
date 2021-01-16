@@ -50,7 +50,7 @@ const Header = () => {
             <Link to="/vehicle-insurance">Vehicle Insurance</Link>
           </li>
         </ul>
-        <span className={styles.register}><Link to="/registration">REGISTER</Link></span>
+        <span className={styles.register}><Link /* to="/registration" */ to="/view-details">REGISTER</Link></span>
         <span className={styles.login}>
           { getLoginComponent(isLoggedInRef)}
           { Cookies.get("token") ? <Link to={"/insurance-house-official"} onClick={() => { logoutHandler(isLoggedInRef); setIsAuthenticated(false) } } >LOGOUT</Link> : <Link to={"/login"}>LOGIN</Link> }

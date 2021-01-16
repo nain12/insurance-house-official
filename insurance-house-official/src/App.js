@@ -8,6 +8,7 @@ import ResetPasswordLink from "./components/ResetPasswordLink/ResetPasswordLink"
 import ResetPassword from "./components/ResetPassword/ResetPassword";
 import AdminViewRecords from "./components/AdminViewRecords/AdminViewRecords";
 import AdminViewRecord from "./components/AdminViewRecords/AdminViewRecord/AdminViewRecord";
+import UserDetailView from "./components/UserDetailView/UserDetailView";
 import Registration from "./components/Registration/Registration";
 import AuthContext from "./util/auth-context";
 
@@ -23,6 +24,7 @@ function App () {
         <Route path="/login" component={Login} exact/>
         <Route path="/view-records" component={AdminViewRecords} exact/>
         <Route path="/view-record" component={AdminViewRecord} exact/>
+        <Route path="/view-details" component={UserDetailView} exact/>
         <Route path="/reset-password-link" component={ResetPasswordLink} exact/>
         <Route path="/reset-password" component={ResetPassword} exact/>
         <Route

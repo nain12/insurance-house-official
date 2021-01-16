@@ -66,7 +66,7 @@ export default class AdminViewRecord extends React.Component {
 
     render () {
       return (
-        this.state.isLoading ? <Loading/> : (<div style={{ position: "relative" }}>
+        this.state.isLoading ? <Loading/> : (<div style={{ position: "relative", height: "200vh" }}>
         <Header/>
         <div className={styles.badge}>
             <img
@@ -85,7 +85,9 @@ export default class AdminViewRecord extends React.Component {
         <p className={styles.inputHeadings}>Policy</p>
         <input type="text" defaultValue={this.state.policy} className={styles.id} onChange={(e) => this.handleChange(e, "policy")}/>
         <p className={styles.inputHeadings}>Comments</p>
-        <textarea defaultValue={this.state.comments} className={styles.id} rows={10} cols={10} onChange={(e) => this.handleChange(e, "comments")}></textarea>
+        <textarea defaultValue={this.state.comments} className={styles.id} rows={40} cols={22} onChange={(e) => this.handleChange(e, "comments")}></textarea>
+        <label className={styles.inputHeadings} htmlFor="uploads">Uploads</label>
+        <input className={styles["file-button"]} type="file" id="uploads" name="uploads" multiple />
         <button className={styles.button} onClick={(e) => this.updateData(e)}>UPDATE</button>
         </div>
         <Footer/>
