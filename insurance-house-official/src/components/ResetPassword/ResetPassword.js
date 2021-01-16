@@ -20,13 +20,12 @@ export default class ResetPassword extends React.Component {
   componentDidMount () {
     const token = this.props.location.search.split("?")[1];
     axios
-      .post("/reset-password", {
+      .post("http://localhost:8000/reset-password", {
         token: token
       }, {
         headers: {
           "Content-Type": "application/json"
-          /* Authorization: "Bearer " + Cookies.get("token") */
-          /* Authorization: "Bearer " + JSON.parse(localStorage.getItem("user")).token */
+
         },
         withCredentials: true
       })
@@ -48,7 +47,7 @@ export default class ResetPassword extends React.Component {
      setResetPassword = () => {
        this.setState({ isLoading: true })
        axios
-         .post("/change-password", {
+         .post("http://localhost:8000/change-password", {
            email: this.state.email,
            password: this.state.password
          }, {
@@ -79,12 +78,14 @@ export default class ResetPassword extends React.Component {
      render () {
        return (
          this.state.isLoading ? <Loading/> : (
-                    <div>
+                    <div style={{ position: "relative" }}>
                     <Header/>
                         <div className={styles.form}>
                         <h2 className={styles.heading}>Reset Password</h2>
-                        <p className={styles.description}>Enter email and new password</p>
+                        <p className={styles.description}>Enter your email address and your new password to reset your password</p>
+                        <p className={styles["label-email"]}>Email address</p>
                         <input className={styles.email} type="email" onChange={(e) => this.setState({ email: e.target.value })}/>
+                        <p className={styles["label-password"]}>New Password</p>
                         <input className={styles.email} type="password" onChange={(e) => this.setState({ password: e.target.value })}/>
                         <button className={styles["reset-button"]} onClick={(e) => this.setResetPassword(e)}>RESET PASSWORD</button>
                        </div>

@@ -28,7 +28,7 @@ const Services = () => {
         {logoContent.map((logo) => {
           return (
             <div key={logo.Title} className={styles["logo-box"]}>
-              <img
+              <img key={logo.Title}
                 src={process.env.PUBLIC_URL + logo.logoIcon}
                 className={styles.img}
               />

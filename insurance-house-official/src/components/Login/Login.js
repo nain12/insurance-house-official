@@ -1,5 +1,5 @@
 import React from "react";
-/* import axios from "axios"; */
+import axios from "axios";
 import { Link } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
@@ -30,8 +30,8 @@ export default class Login extends React.Component {
   handleSubmit (event) {
     event.preventDefault();
     this.setState({ isLoading: true });
-    /*  axios
-      .post("https://insurance-house-official-back.herokuapp.com/login", {
+    axios
+      .post("http://localhost:8000/login", {
         email: this.state.email,
         password: this.state.password
       }, {
@@ -46,7 +46,7 @@ export default class Login extends React.Component {
           this.context.setIsAuthenticated(true, () => {
             this.setState({ isLoading: false });
           });
-          window.localStorage.setItem("user", JSON.stringify(response.data));
+          /*  window.localStorage.setItem("user", JSON.stringify(response.data)); */
           this.props.history.replace("/view-records");
         } else {
           this.setState({ isLoading: false });
@@ -60,12 +60,12 @@ export default class Login extends React.Component {
         alert(
           "There was an error in processing the request. Please try again after some time."
         );
-      }); */
-    const data = {
+      });
+    /* const data = {
       email: this.state.email,
       password: this.state.password
     };
-    fetch("http://31.220.51.195/login", {
+    fetch("http://localhost:5000/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -94,7 +94,7 @@ export default class Login extends React.Component {
         alert(
           "There was an error in processing the request. Please try again after some time."
         );
-      });
+      }); */
   }
 
   render () {
@@ -134,6 +134,7 @@ export default class Login extends React.Component {
             <button
               className={styles.button}
               onClick={(e) => this.handleSubmit(e)}
+              type="submit"
             >
               LOGIN
             </button>

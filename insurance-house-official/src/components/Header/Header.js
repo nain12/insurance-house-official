@@ -1,4 +1,5 @@
 import React from "react";
+import Cookies from "js-cookie";
 import { Link } from "react-router-dom";
 import AuthContext from "../../util/auth-context";
 import * as styles from "./Header.module.scss";
@@ -15,7 +16,7 @@ const getLoginComponent = (isLoggedInRef) => {
 
 const logoutHandler = (isLoggedInRef) => {
   isLoggedInRef.current = false;
-  localStorage.clear();
+  Cookies.remove("token");
 }
 
 const Header = () => {
@@ -49,10 +50,10 @@ const Header = () => {
             <Link to="/vehicle-insurance">Vehicle Insurance</Link>
           </li>
         </ul>
-        <span className={styles.register}><Link to="/insurance-house-official">REGISTER</Link></span>
+        <span className={styles.register}><Link to="/registration">REGISTER</Link></span>
         <span className={styles.login}>
           { getLoginComponent(isLoggedInRef)}
-          {localStorage.getItem("user") && JSON.parse(localStorage.getItem("user")) ? <Link to={"/insurance-house-official"} onClick={() => { logoutHandler(isLoggedInRef); setIsAuthenticated(false) } } >LOGOUT</Link> : <Link to={"/login"}>LOGIN</Link> }
+          { Cookies.get("token") ? <Link to={"/insurance-house-official"} onClick={() => { logoutHandler(isLoggedInRef); setIsAuthenticated(false) } } >LOGOUT</Link> : <Link to={"/login"}>LOGIN</Link> }
         </span>
       </nav>
     </div>

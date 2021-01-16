@@ -1,6 +1,5 @@
 {
   "name": "insurance-house-official",
-  "proxy": "http://localhost:8000/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -21,7 +20,6 @@
     "bfj": "^7.0.2",
     "camelcase": "^6.1.0",
     "case-sensitive-paths-webpack-plugin": "2.3.0",
-    "concurrently": "^5.3.0",
     "copy-webpack-plugin": "^6.2.1",
     "cra-template": "1.1.1",
     "css-loader": "4.3.0",
@@ -85,9 +83,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "react-start": "node scripts/start.js",
-    "node-start": "node server/app.js",
-    "start": "concurrently \"npm run react-start\" \"npm run node-start\"",
+    "start": "node scripts/start.js",
     "fix": "eslint --fix src/**/*.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",

@@ -8,6 +8,7 @@ import ResetPasswordLink from "./components/ResetPasswordLink/ResetPasswordLink"
 import ResetPassword from "./components/ResetPassword/ResetPassword";
 import AdminViewRecords from "./components/AdminViewRecords/AdminViewRecords";
 import AdminViewRecord from "./components/AdminViewRecords/AdminViewRecord/AdminViewRecord";
+import Registration from "./components/Registration/Registration";
 import AuthContext from "./util/auth-context";
 
 import "./App.scss";
@@ -18,6 +19,7 @@ function App () {
     <BrowserRouter>
       <Switch>
         <Route path="/insurance-house-official" component={Home} exact />
+        <Route path="/registration" component={Registration} exact/>
         <Route path="/login" component={Login} exact/>
         <Route path="/view-records" component={AdminViewRecords} exact/>
         <Route path="/view-record" component={AdminViewRecord} exact/>

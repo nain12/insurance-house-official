@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import axios from "axios";
+/* import axios from "axios"; */
 import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-axios.defaults.baseURL = "http://31.220.51.195";
+/* axios.defaults.baseURL = "http://31.220.51.195"; */
 ReactDOM.render(
     <App />,
     document.getElementById("root")

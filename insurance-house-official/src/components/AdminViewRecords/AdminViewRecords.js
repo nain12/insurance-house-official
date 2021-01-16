@@ -1,6 +1,6 @@
 import React from "react";
-/* import axios from "axios"; */
-/* import Cookies from "js-cookie"; */
+import axios from "axios";
+import Cookies from "js-cookie";
 import { Link } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
@@ -22,14 +22,13 @@ export default class AdminViewRecords extends React.Component {
       ...this.state,
       isLoading: true
     })
-    /*  axios.get("http://localhost:5000/users", {
+    axios.get("http://localhost:8000/users", {
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + Cookies.get("token")
       },
       withCredentials: true
     }).then(response => {
-      console.log("data", response.data);
       this.setState({
         records: response.data.result,
         isLoading: false
@@ -41,28 +40,7 @@ export default class AdminViewRecords extends React.Component {
       })
       console.log(err);
       alert("Could not fetch records");
-    }) */
-    fetch("http://31.220.51.195/users", {
-      headers: {
-        "Content-Type": "application/json",
-        /*  Authorization: "Bearer " + Cookies.get("token") */
-        Authorization: "Bearer " + JSON.parse(localStorage.getItem("user")).token
-      },
-      credentials: "include"
-    }).then(response => response.json())
-      .then(response => {
-        this.setState({
-          records: response.result,
-          isLoading: false
-        })
-      }).catch(err => {
-        this.setState({
-          ...this.state,
-          isLoading: false
-        })
-        console.log(err);
-        alert("Could not fetch records");
-      })
+    })
   }
 
   render () {

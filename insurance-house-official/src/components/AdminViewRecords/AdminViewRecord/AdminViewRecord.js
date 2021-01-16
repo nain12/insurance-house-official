@@ -1,5 +1,4 @@
 import React from "react";
-/* import Cookies from "js-cookie"; */
 import axios from "axios";
 import Header from "../../Header/Header";
 import Footer from "../../Footer/Footer";
@@ -44,11 +43,9 @@ export default class AdminViewRecord extends React.Component {
       })
 
       axios
-        .post("http://31.220.51.195/update-user", data, {
+        .post("http://localhost:8000/update-user", data, {
           headers: {
-            "Content-Type": "application/json",
-            /*  Authorization: "Bearer " + Cookies.get("token") */
-            Authorization: "Bearer " + JSON.parse(localStorage.getItem("user")).token
+            "Content-Type": "application/json"
           },
           withCredentials: true
         })

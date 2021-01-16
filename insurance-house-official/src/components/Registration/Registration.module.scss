@@ -1,0 +1,157 @@
+@import '../../variables.scss';
+@import '../../utility.scss';
+
+
+.container {
+    height: 140vh;
+    position: relative;
+    @include useDesktopLarge {
+        height: 200vh;
+    }
+}
+.badge {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin: 8% auto;
+    background-color: $primaryColor;
+    position: relative;
+
+    @include useMobile {
+      height: 72px;
+      width: 72px;
+      margin: 8% auto;
+    }
+    @include useDesktopLarge {
+        margin: 4% auto;
+    }
+}
+
+.person {
+  @include useMobile {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    left: 23%;
+    top: 16%;
+    z-index: 10;
+  }
+
+  @include useTablet {
+    height: 64px;
+    width: 64px;
+    position: relative;
+    left: 23%;
+    top: -72%;
+    z-index: 10;
+    }
+
+    @include useDesktopSmall {
+      height: 64px;
+      width: 64px;
+      position: relative;
+      left: 23%;
+      top: -80%;
+      z-index: 10;
+    } 
+    
+    @include useDesktopLarge {
+      height: 72px;
+      width: 72px;
+      position: relative;
+      left: 20%;
+      top: -56%;
+      z-index: 10;
+    }
+  }
+
+  .heading {
+      @extend .title;
+      margin: 64% -96%;
+      display: inline-block;
+      white-space: nowrap;
+
+      @include useTablet {
+        margin: 124% -96%;
+      }
+
+      @include useDesktopSmall {
+        margin: 135% -96%;
+      }
+      @include useDesktopLarge {
+        margin: 114% -96%;
+      }
+  }
+
+   .form {
+    margin: 8% auto;
+
+    @include useMobile {
+        margin: 24% auto;
+        width: 60%;
+    }
+
+    @include useTablet {
+        margin: 14% 30%;
+    }
+
+    @include useDesktopSmall {
+        margin: 14% 34%;
+   }
+
+   @include useDesktopLarge {
+    width: 25%;
+   }
+}
+
+  .name, .email, .policy, .password  {
+        text-align: left;
+        margin-left: 0
+  }
+
+  .name-input {
+      @extend .text;
+      margin-top: 8%;
+      border: 1px solid #707070;
+      width: 320px;
+      height: 40px;
+      border-radius: 16px;
+      text-indent: 10px;
+
+      @include useMobile {
+        margin-top: 8%;
+        width: 240px;
+      }
+
+      @include useDesktopLarge {
+          margin-top: 4%;
+      }
+  }
+
+  .email-input, .policy-input, .password-input {
+  @extend .name-input; 
+  }
+
+  .register {
+    display: block;
+    margin: 8% auto;
+    padding: 12px;
+    color: $navItemsColor;
+    font-family: $fontStack;
+    font-weight: $fontSemiBold;
+    border-radius: 24px;
+    background-color: $ctaColor;
+    width: 134px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    margin-top: 16%;
+
+    @include useMobile {
+      
+    }
+  }
+
+  .register:hover{
+    background-color: $primaryColor;
+  }

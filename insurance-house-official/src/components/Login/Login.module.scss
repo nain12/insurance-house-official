@@ -3,9 +3,10 @@
 
 
 .footer-container {
+  position: relative;
+  height: 102vh;
    @include useDesktopLarge {
-    position: relative;
-     height: 160vh;
+     height: 180vh;
   } 
  
 }
