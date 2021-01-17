@@ -134,5 +134,26 @@
     }
   }
 
+  .pagination-container {
+    position: absolute;
+    bottom: 64px;
+    right: 48px;
+    display: flex;
+  }
+  .pagination {
+    font-family: $fontStack;
+    font-weight: $fontSemiBold;
+    text-decoration: none;
+    padding: 8px;
+    color: $primaryColor;
+    border: 1px solid $primaryColor;
+    margin-right: 16px;
+}
+
+.pagination:active, 
+.pagination:hover {
+    background-color: $primaryColor;
+    color: $navItemsColor;
+}
 
   

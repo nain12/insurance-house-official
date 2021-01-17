@@ -11,7 +11,7 @@ const sendResetPasswordLink = (event, email, setIsLoading) => {
   event.preventDefault();
   setIsLoading(true);
   axios
-    .post("http://localhost:8000/send-mail", {
+    .post("/send-mail", {
       email: email
     }, {
       headers: {

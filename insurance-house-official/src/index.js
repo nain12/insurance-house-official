@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-/* import axios from "axios"; */
+import axios from "axios";
 import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-/* axios.defaults.baseURL = "http://31.220.51.195"; */
+axios.defaults.baseURL = process.env.NODE_ENV === "production" ? "http://31.220.51.195" : "http://localhost:8000";
 ReactDOM.render(
     <App />,
     document.getElementById("root")

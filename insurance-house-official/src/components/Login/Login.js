@@ -31,7 +31,7 @@ export default class Login extends React.Component {
     event.preventDefault();
     this.setState({ isLoading: true });
     axios
-      .post("http://localhost:8000/login", {
+      .post("/login", {
         email: this.state.email,
         password: this.state.password
       }, {
@@ -46,8 +46,14 @@ export default class Login extends React.Component {
           this.context.setIsAuthenticated(true, () => {
             this.setState({ isLoading: false });
           });
-          /*  window.localStorage.setItem("user", JSON.stringify(response.data)); */
-          this.props.history.replace("/view-records");
+          if (response.data.role === "Admin") {
+            this.props.history.replace("/view-records?page=1");
+          } else {
+            this.props.history.replace({
+              pathname: "/view-details",
+              state: response.data
+            });
+          }
         } else {
           this.setState({ isLoading: false });
           alert("Invalid email address or password");
@@ -61,40 +67,6 @@ export default class Login extends React.Component {
           "There was an error in processing the request. Please try again after some time."
         );
       });
-    /* const data = {
-      email: this.state.email,
-      password: this.state.password
-    };
-    fetch("http://localhost:5000/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data),
-      credentials: "include"
-    })
-      .then((response) => response.json())
-      .then((response) => {
-        if (response.email) {
-          localStorage.setItem("login", JSON.stringify(response));
-          this.context.setIsAuthenticated(true, () => {
-            this.setState({ isLoading: false });
-          });
-          window.localStorage.setItem("user", JSON.stringify(response));
-          this.props.history.replace("/view-records");
-        } else {
-          this.setState({ isLoading: false });
-          alert("Invalid email address or password");
-          window.location.href = "/login";
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-        this.setState({ isLoading: false });
-        alert(
-          "There was an error in processing the request. Please try again after some time."
-        );
-      }); */
   }
 
   render () {

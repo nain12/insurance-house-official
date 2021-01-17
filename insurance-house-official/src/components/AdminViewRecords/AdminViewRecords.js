@@ -13,7 +13,8 @@ export default class AdminViewRecords extends React.Component {
     super();
     this.state = {
       records: [],
-      isLoading: false
+      isLoading: false,
+      numberOfPages: []
     }
   }
 
@@ -22,7 +23,34 @@ export default class AdminViewRecords extends React.Component {
       ...this.state,
       isLoading: true
     })
-    axios.get("http://localhost:8000/users", {
+    axios.get("/users?page=1", {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + Cookies.get("token")
+      },
+      withCredentials: true
+    }).then(response => {
+      console.log(response);
+      this.setState({
+        records: response.data.result,
+        isLoading: false
+      })
+    }).catch(err => {
+      this.setState({
+        ...this.state,
+        isLoading: false
+      })
+      console.log(err);
+      alert("Could not fetch records");
+    })
+  }
+
+  fetchPage (page) {
+    this.setState({
+      ...this.state,
+      isLoading: true
+    })
+    axios.get(`/users?page=${page}`, {
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + Cookies.get("token")
@@ -81,6 +109,16 @@ export default class AdminViewRecords extends React.Component {
                     )}
                 </tbody>
             </table>
+            <div className={styles["pagination-container"]}>
+            <Link to={`/view-records${this.props.location.search}`} className={styles.pagination} onClick={() => this.fetchPage(1)}>1</Link>
+            {
+            this.state.numberOfPages.map((page, index) => {
+              return (
+                <Link to={`/view-records?page=${page}`} key={index} className={styles.pagination} onClick={() => this.fetchPage(page)}>{page}</Link>
+              )
+            })
+        }
+        </div>
             <Footer/>
         </div>)
     )
