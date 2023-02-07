@@ -1,14 +1,14 @@
 import React from "react";
-import * as styles from "./Footer.module.scss";
+import styles from "./Footer.module.scss";
 
 const Footer = () => {
-  return (
-    <footer className={styles.container}>
-      <p className={styles.text}>
+    return (
+        <footer className={styles.container}>
+            <p className={styles.text}>
         &#169;&nbsp;The Insurance House. All rights reserved.
-      </p>
-    </footer>
-  );
+            </p>
+        </footer>
+    );
 };
 
 export default Footer;

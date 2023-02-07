@@ -14,32 +14,32 @@ import AuthContext from "./util/auth-context";
 
 import "./App.scss";
 function App () {
-  const [isAuthenticated, setIsAuthenticated] = React.useState(false);
-  return (
-    <AuthContext.Provider value={{ isAuthenticated, setIsAuthenticated }}>
-    <BrowserRouter>
-      <Switch>
-        <Route path="/insurance-house-official" component={Home} exact />
-        <Route path="/registration" component={Registration} exact/>
-        <Route path="/login" component={Login} exact/>
-        <Route path="/view-records" component={AdminViewRecords} exact/>
-        <Route path="/view-record" component={AdminViewRecord} exact/>
-        <Route path="/view-details" component={UserDetailView} exact/>
-        <Route path="/reset-password-link" component={ResetPasswordLink} exact/>
-        <Route path="/reset-password" component={ResetPassword} exact/>
-        <Route
-          path="/:name"
-          render={(props) => <Insurance {...props} key={props.location.key} />}
-        />
-        <Redirect to="/insurance-house-official" from="/"/>
-      </Switch>
-    </BrowserRouter>
-    </AuthContext.Provider>
-  );
+    const [isAuthenticated, setIsAuthenticated] = React.useState(false);
+    return (
+        <AuthContext.Provider value={{ isAuthenticated, setIsAuthenticated }}>
+            <BrowserRouter>
+                <Switch>
+                    <Route path="/insurance-house-official" component={Home} exact />
+                    <Route path="/registration" component={Registration} exact/>
+                    <Route path="/login" component={Login} exact/>
+                    <Route path="/view-records" component={AdminViewRecords} exact/>
+                    <Route path="/view-record" component={AdminViewRecord} exact/>
+                    <Route path="/view-details" component={UserDetailView} exact/>
+                    <Route path="/reset-password-link" component={ResetPasswordLink} exact/>
+                    <Route path="/reset-password" component={ResetPassword} exact/>
+                    <Route
+                        path="/:name"
+                        render={(props) => <Insurance {...props} key={props.location.key} />}
+                    />
+                    <Redirect to="/insurance-house-official" from="/"/>
+                </Switch>
+            </BrowserRouter>
+        </AuthContext.Provider>
+    );
 }
 
 App.propTypes = {
-  location: PropTypes.shape().isRequired
+    location: PropTypes.shape().isRequired
 };
 
 export default App;

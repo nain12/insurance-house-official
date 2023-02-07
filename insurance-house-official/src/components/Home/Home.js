@@ -9,17 +9,17 @@ import AboutUs from "../AboutUs/AboutUs";
 import Footer from "../Footer/Footer";
 
 const Home = () => {
-  return (
-    <div style={{ position: "relative" }}>
-      <Header />
-      <Banner />
-      <Services />
-      <Testimonials />
-      <ContactUs />
-      <AboutUs />
-      <Footer />
-    </div>
-  );
+    return (
+        <div style={{ position: "relative" }}>
+            <Header />
+            <Banner />
+            <Services />
+            <Testimonials />
+            <ContactUs />
+            <AboutUs />
+            <Footer />
+        </div>
+    );
 };
 
 export default Home;
